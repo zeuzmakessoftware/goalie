@@ -6,10 +6,31 @@ import { writeFile } from 'node:fs/promises';
 import { z } from 'zod';
 import 'dotenv/config';
 
-// 1. Setup OpenRouter Configuration
+const openrouterApiKey = process.env.OPENROUTER_API_KEY?.trim();
+if (!openrouterApiKey) {
+  console.error(
+    'Missing OPENROUTER_API_KEY. Add it to .env or export it before starting Goalie.',
+  );
+  process.exit(1);
+}
+
+const openrouterModel =
+  process.env.OPENROUTER_MODEL?.trim() ||
+  'nvidia/nemotron-3-ultra-550b-a55b:free';
+const openrouterHeaders: Record<string, string> = {
+  'X-OpenRouter-Title':
+    process.env.OPENROUTER_TITLE?.trim() || 'Goalie CLI',
+};
+const openrouterSiteUrl = process.env.OPENROUTER_SITE_URL?.trim();
+if (openrouterSiteUrl) {
+  openrouterHeaders['HTTP-Referer'] = openrouterSiteUrl;
+}
+
+// OpenRouter exposes an OpenAI-compatible Chat Completions API.
 const openrouter = createOpenAI({
-  baseURL: 'https://openrouter.ai',
-  apiKey: process.env.OPENROUTER_API_KEY ?? '',
+  baseURL: 'https://openrouter.ai/api/v1',
+  apiKey: openrouterApiKey,
+  headers: openrouterHeaders,
 });
 
 // 2. Initialize the Blessed Screen Interface
@@ -111,10 +132,10 @@ async function handleInput(userInput: string) {
   appendLog('{yellow-fg}System > AI is thinking...{/}');
   screen.render();
 
-  // 6. Begin your standard OpenRouter API trace call...
+  // 6. Send the request through OpenRouter's Chat Completions-compatible model.
   try {
     const response = await generateText({
-      model: openrouter('nvidia/nemotron-3-ultra-550b-a55b:free'),
+      model: openrouter.chat(openrouterModel),
       instructions,
       messages: messages,
       stopWhen: stepCountIs(5),
