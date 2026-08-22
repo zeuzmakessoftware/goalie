@@ -1,15 +1,15 @@
-import { generateText, tool } from 'ai';
+import { generateText, stepCountIs, tool, type ModelMessage } from 'ai';
 import { createOpenAI } from '@ai-sdk/openai';
 import blessed from 'neo-blessed';
 import figlet from 'figlet';
-import * as fs from 'fs';
+import { writeFile } from 'node:fs/promises';
 import { z } from 'zod';
 import 'dotenv/config';
 
 // 1. Setup OpenRouter Configuration
 const openrouter = createOpenAI({
   baseURL: 'https://openrouter.ai',
-  apiKey: process.env.OPENROUTER_API_KEY,
+  apiKey: process.env.OPENROUTER_API_KEY ?? '',
 });
 
 // 2. Initialize the Blessed Screen Interface
@@ -61,9 +61,9 @@ screen.append(inputField);
 inputField.focus();
 
 // Global chat history state
-const messages: any[] = [
-  { role: 'system', content: 'You are a terminal coding assistant. Keep text concise.' }
-];
+const instructions =
+  'You are a terminal coding assistant. Keep text concise.';
+const messages: ModelMessage[] = [];
 
 // Helper function to append text directly to the TUI display log
 function appendLog(text: string) {
@@ -115,14 +115,19 @@ async function handleInput(userInput: string) {
   try {
     const response = await generateText({
       model: openrouter('nvidia/nemotron-3-ultra-550b-a55b:free'),
+      instructions,
       messages: messages,
+      stopWhen: stepCountIs(5),
       tools: {
         writeFile: tool({
           description: 'Write or update a local workspace file',
-          parameters: z.object({ path: z.string(), content: z.string() }),
+          inputSchema: z.object({
+            path: z.string().min(1),
+            content: z.string(),
+          }),
           execute: async ({ path, content }) => {
             appendLog(`{magenta-fg}[Tool Executing: Writing to ${path}]{/}`);
-            fs.writeFileSync(path, content, 'utf-8');
+            await writeFile(path, content, 'utf-8');
             return { status: 'Success' };
           },
         }),
@@ -131,8 +136,10 @@ async function handleInput(userInput: string) {
 
     if (response.text) {
       appendLog(`{bold}{cyan-fg}Agent >{/} ${response.text}\n`);
-      messages.push({ role: 'assistant', content: response.text });
     }
+
+    // Keep assistant tool calls/results as well as plain text in the next turn.
+    messages.push(...response.responseMessages);
   } catch (err: any) {
     appendLog(`{red-fg}Error: ${err.message}{/}`);
   }
@@ -144,8 +151,8 @@ async function handleInput(userInput: string) {
 }
 
 // 6. Hook up Keyboard Event Handlers
-inputField.on('submit', (text) => {
-  handleInput(text);
+inputField.on('submit', (text: string) => {
+  void handleInput(text);
 });
 
 // Global escape hatch keys to exit application instantly
