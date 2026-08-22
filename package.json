@@ -1,0 +1,31 @@
+{
+  "name": "goalie",
+  "version": "1.0.0",
+  "type": "module",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "start": "tsx index.ts",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@ai-sdk/openai": "^4.0.46",
+    "@clack/prompts": "^1.7.0",
+    "ai": "^7.0.77",
+    "dotenv": "^17.4.2",
+    "execa": "^10.0.1",
+    "figlet": "^1.11.4",
+    "neo-blessed": "^0.2.0",
+    "zod": "^4.4.3"
+  },
+  "devDependencies": {
+    "@types/blessed": "^0.1.27",
+    "@types/figlet": "^1.7.0",
+    "@types/node": "^26.2.0",
+    "tsx": "^4.23.12",
+    "typescript": "^7.0.2"
+  }
+}
