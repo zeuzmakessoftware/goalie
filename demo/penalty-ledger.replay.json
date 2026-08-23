@@ -1,0 +1,544 @@
+{
+  "kind": "goalie.replay.v1",
+  "provenance": {
+    "source": "simulated_fixture",
+    "edited": false,
+    "recordedAt": "2026-08-22T19:00:00.000Z",
+    "harnessVersion": "1.0.0",
+    "backendVersions": {
+      "scripted": "deterministic-v1"
+    },
+    "baseSha": "dddddddddddddddddddddddddddddddddddddddd",
+    "finalSha": "ffffffffffffffffffffffffffffffffffffffff",
+    "redaction": "redacted",
+    "fixture": "penalty-ledger"
+  },
+  "eventLogHash": "327fe33b1a5058d52f7d10549d8dc16873608583ffae1e7e7b24d10c474658f6",
+  "artifactHashes": {
+    "src/ledger.ts": "13c254a4ee8daa42495a84762c24f4932703806c6f43128a4af39e3237464254"
+  },
+  "events": [
+    {
+      "schemaVersion": 1,
+      "id": "c5c35f34-d61a-42ff-9e73-4e7f73216d05",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 1,
+      "timestamp": "2026-08-22T23:52:56.843Z",
+      "causationId": "c5c35f34-d61a-42ff-9e73-4e7f73216d05",
+      "kind": "session.created",
+      "payload": {
+        "spec": {
+          "budget": {
+            "maxConcurrency": 3,
+            "maxTurns": 20,
+            "maxWallTimeMs": 900000,
+            "plateau": {
+              "minImprovement": 0.02,
+              "window": 3
+            }
+          },
+          "checks": [
+            {
+              "config": {
+                "commandId": "verify"
+              },
+              "criterionIds": [
+                "correctness"
+              ],
+              "description": "",
+              "evaluatorId": "approved-command",
+              "id": "check:verify",
+              "name": "protected verifier",
+              "required": true
+            }
+          ],
+          "constraints": [
+            "Replay fixture only; no active agents or tools."
+          ],
+          "goal": "Repair the Penalty Ledger so that a shot ID is accepted exactly once under concurrent writers, replay recovers safely from a torn final JSONL record, and tied standings are deterministic. Preserve the public API. Ordinary tests are a baseline; completion requires every protected verifier.",
+          "metadata": {
+            "fixture": true,
+            "simulation": true
+          },
+          "qualityBar": {
+            "blindComparison": false,
+            "criteria": [
+              {
+                "description": "Every protected deterministic verifier passes.",
+                "id": "correctness",
+                "required": true,
+                "weight": 1
+              }
+            ],
+            "description": "Crash-safe, exactly-once penalty ingestion with deterministic ranking.",
+            "references": [
+              "fixture://penalty-ledger"
+            ]
+          },
+          "version": 1,
+          "workspaceRoot": "/recorded/penalty-ledger"
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "0000000000000000000000000000000000000000000000000000000000000000",
+      "hash": "0cfc9f19bb100dec74b0b313415763af002a1c973e75e75dd7d2071b7e457175"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "09e60ac0-2fad-464b-9bcf-07d01c0c12a2",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 2,
+      "timestamp": "2026-08-22T23:52:56.853Z",
+      "causationId": "09e60ac0-2fad-464b-9bcf-07d01c0c12a2",
+      "kind": "task.upserted",
+      "payload": {
+        "task": {
+          "attempts": 0,
+          "checkIds": [
+            "check:verify"
+          ],
+          "createdAt": "2026-08-22T19:00:00.000Z",
+          "dependencies": [],
+          "id": "task:ledger",
+          "metadata": {
+            "lane": "primary"
+          },
+          "objective": "Repair the Penalty Ledger so that a shot ID is accepted exactly once under concurrent writers, replay recovers safely from a torn final JSONL record, and tied standings are deterministic. Preserve the public API. Ordinary tests are a baseline; completion requires every protected verifier.",
+          "priority": 100,
+          "required": true,
+          "status": "ready",
+          "title": "Repair Penalty Ledger",
+          "updatedAt": "2026-08-22T19:00:00.000Z",
+          "writeSet": [
+            "src/ledger.ts"
+          ]
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "0cfc9f19bb100dec74b0b313415763af002a1c973e75e75dd7d2071b7e457175",
+      "hash": "340899b25f455aacca968819b321da6829ea2743496cf048a8dc3c9a6927dfb6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "566cdfee-8253-4939-a238-e5c714baff9c",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 3,
+      "timestamp": "2026-08-22T23:52:56.859Z",
+      "causationId": "566cdfee-8253-4939-a238-e5c714baff9c",
+      "kind": "session.status_changed",
+      "payload": {
+        "status": "running"
+      },
+      "artifactHashes": {},
+      "previousHash": "340899b25f455aacca968819b321da6829ea2743496cf048a8dc3c9a6927dfb6",
+      "hash": "095bfecd9bbc2f2495d998e5e52e1a80fa6c20492facd6a29d3b8d1eadb9e23e"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "254c754f-2291-4421-9af8-551ddd9abce2",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 4,
+      "timestamp": "2026-08-22T23:52:56.868Z",
+      "causationId": "254c754f-2291-4421-9af8-551ddd9abce2",
+      "taskId": "task:ledger",
+      "kind": "task.started",
+      "payload": {
+        "agentId": "worker:ledger",
+        "startedAt": "2026-08-22T19:00:00.000Z",
+        "taskId": "task:ledger"
+      },
+      "artifactHashes": {},
+      "previousHash": "095bfecd9bbc2f2495d998e5e52e1a80fa6c20492facd6a29d3b8d1eadb9e23e",
+      "hash": "0d6f6cbcd67033541c0e29ae4157db4e641436790538d335660e1f87899befef"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "4cdbbcf4-aefd-48f2-a69a-3f3a8745576f",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 5,
+      "timestamp": "2026-08-22T23:52:56.874Z",
+      "causationId": "4cdbbcf4-aefd-48f2-a69a-3f3a8745576f",
+      "taskId": "task:ledger",
+      "kind": "workspace.checkpoint",
+      "payload": {
+        "attempt": 1,
+        "changedPaths": [
+          "src/ledger.ts"
+        ],
+        "commitSha": "eeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeeee",
+        "taskId": "task:ledger"
+      },
+      "artifactHashes": {},
+      "previousHash": "0d6f6cbcd67033541c0e29ae4157db4e641436790538d335660e1f87899befef",
+      "hash": "54a4cab3a8c2aba3b80f35d2bdfd2bdbf9ea8f73d82e528928d205767db59aba"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "6df10856-5184-496b-9f48-d62aea34c029",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 6,
+      "timestamp": "2026-08-22T23:52:56.882Z",
+      "causationId": "6df10856-5184-496b-9f48-d62aea34c029",
+      "kind": "evidence.recorded",
+      "payload": {
+        "evidence": {
+          "checkId": "check:verify",
+          "createdAt": "2026-08-22T19:00:00.000Z",
+          "digest": "6da900594eac7c49bcb6dc21e9da9c5e2e8aefb283882888417ef227253b2ed7",
+          "id": "evidence:verify:1",
+          "kind": "test",
+          "metadata": {},
+          "source": "protected-fixture",
+          "summary": "3 protected failures: duplicate ingestion, torn-tail replay, tie ordering.",
+          "taskId": "task:ledger"
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "54a4cab3a8c2aba3b80f35d2bdfd2bdbf9ea8f73d82e528928d205767db59aba",
+      "hash": "9802048a857bac7f5e1f3ac27bcf2d81241be75c57c9fd4d7a29b9929161f611"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "33eb7af3-4c16-484e-9d6a-2ddeb4ebad46",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 7,
+      "timestamp": "2026-08-22T23:52:56.888Z",
+      "causationId": "33eb7af3-4c16-484e-9d6a-2ddeb4ebad46",
+      "kind": "check.recorded",
+      "payload": {
+        "check": {
+          "completedAt": "2026-08-22T19:00:00.000Z",
+          "definitionId": "check:verify",
+          "evaluatorId": "approved-command",
+          "evaluatorVersion": "1",
+          "evidenceIds": [
+            "evidence:verify:1"
+          ],
+          "id": "result:verify:1",
+          "metadata": {},
+          "score": 0.4,
+          "startedAt": "2026-08-22T19:00:00.000Z",
+          "status": "failed",
+          "summary": "3 protected failures: duplicate ingestion, torn-tail replay, tie ordering.",
+          "taskId": "task:ledger"
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "9802048a857bac7f5e1f3ac27bcf2d81241be75c57c9fd4d7a29b9929161f611",
+      "hash": "f51d01ee0cb5995f6770bcc3d7405bdda39e3147ba8f18b7d9742fd4418c26f6"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "6e089cb5-1db6-4fb0-9e42-b947b610e881",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 8,
+      "timestamp": "2026-08-22T23:52:56.893Z",
+      "causationId": "6e089cb5-1db6-4fb0-9e42-b947b610e881",
+      "taskId": "task:ledger",
+      "kind": "task.submitted",
+      "payload": {
+        "evidenceIds": [
+          "evidence:verify:1"
+        ],
+        "taskId": "task:ledger"
+      },
+      "artifactHashes": {},
+      "previousHash": "f51d01ee0cb5995f6770bcc3d7405bdda39e3147ba8f18b7d9742fd4418c26f6",
+      "hash": "d4cb73287e25afa9faef42b3b760a5db71ba101c3e5b70540f97d27f99676361"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "1b2d55db-213f-48e2-88a0-596e32d9a605",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 9,
+      "timestamp": "2026-08-22T23:52:56.900Z",
+      "causationId": "1b2d55db-213f-48e2-88a0-596e32d9a605",
+      "kind": "critic.verdict_recorded",
+      "payload": {
+        "verdict": {
+          "attempt": 1,
+          "biggestGap": "Use an atomic lock/claim and ignore only a torn final JSONL record.",
+          "comparatorWinner": "reference",
+          "confidence": 0.99,
+          "createdAt": "2026-08-22T19:00:00.000Z",
+          "criteria": [
+            {
+              "criterionId": "correctness",
+              "evidenceIds": [
+                "evidence:verify:1"
+              ],
+              "rationale": "Exactly-once and recovery invariants fail.",
+              "score": 0.42,
+              "status": "failed"
+            }
+          ],
+          "criticId": "critic:fresh:1",
+          "direction": "negative",
+          "evidenceIds": [
+            "evidence:verify:1"
+          ],
+          "id": "verdict:ledger:1",
+          "metadata": {},
+          "recommendations": [
+            "Repair the invariant and replay the verifier."
+          ],
+          "score": 0.42,
+          "sessionId": "demo-penalty-ledger",
+          "summary": "SAVE: deterministic evidence rejects this attempt.",
+          "taskId": "task:ledger",
+          "verdict": "fail"
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "d4cb73287e25afa9faef42b3b760a5db71ba101c3e5b70540f97d27f99676361",
+      "hash": "baf17001028e420c842e70f817c725e8f1fa41814d627b6e256513265d6b388b"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "d7dfede6-d65c-4f1e-a54b-33a047af7fdf",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 10,
+      "timestamp": "2026-08-22T23:52:56.905Z",
+      "causationId": "d7dfede6-d65c-4f1e-a54b-33a047af7fdf",
+      "kind": "session.restarted",
+      "payload": {
+        "declaredKill": true,
+        "recoveredFromSequence": 8
+      },
+      "artifactHashes": {},
+      "previousHash": "baf17001028e420c842e70f817c725e8f1fa41814d627b6e256513265d6b388b",
+      "hash": "2635340f59e015bbf529d27d9406f1a371ce9666cae2ed6b6b1b27db6fd88163"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "182a1790-3eba-4ab8-aed7-0ce9c02ca609",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 11,
+      "timestamp": "2026-08-22T23:52:56.910Z",
+      "causationId": "182a1790-3eba-4ab8-aed7-0ce9c02ca609",
+      "taskId": "task:ledger",
+      "kind": "task.started",
+      "payload": {
+        "agentId": "worker:ledger",
+        "startedAt": "2026-08-22T19:00:00.000Z",
+        "taskId": "task:ledger"
+      },
+      "artifactHashes": {},
+      "previousHash": "2635340f59e015bbf529d27d9406f1a371ce9666cae2ed6b6b1b27db6fd88163",
+      "hash": "cae810aa55f7c6b6fa87275d70c916b8d57f69ab728839aa7619a510b66a962d"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "63984576-cf25-4bdb-94cc-6ea20e19b107",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 12,
+      "timestamp": "2026-08-22T23:52:56.916Z",
+      "causationId": "63984576-cf25-4bdb-94cc-6ea20e19b107",
+      "taskId": "task:ledger",
+      "kind": "workspace.checkpoint",
+      "payload": {
+        "attempt": 2,
+        "changedPaths": [
+          "src/ledger.ts"
+        ],
+        "commitSha": "ffffffffffffffffffffffffffffffffffffffff",
+        "taskId": "task:ledger"
+      },
+      "artifactHashes": {},
+      "previousHash": "cae810aa55f7c6b6fa87275d70c916b8d57f69ab728839aa7619a510b66a962d",
+      "hash": "7ded0f6f7829eca1f4e7e803546bfb1088b6d5ad291f11c34a4c418441a12d02"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "dd3cadc3-2c2b-4f8f-aeac-0f3e82a74acd",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 13,
+      "timestamp": "2026-08-22T23:52:56.921Z",
+      "causationId": "dd3cadc3-2c2b-4f8f-aeac-0f3e82a74acd",
+      "kind": "evidence.recorded",
+      "payload": {
+        "evidence": {
+          "checkId": "check:verify",
+          "createdAt": "2026-08-22T19:00:00.000Z",
+          "digest": "722c06aa4cba783040ec540e5a4265cd2239a6ad82f2bcbfdb3f63251ab29e83",
+          "id": "evidence:verify:2",
+          "kind": "test",
+          "metadata": {},
+          "source": "protected-fixture",
+          "summary": "3/3 protected checks passed: concurrent exactly-once ingestion, torn-tail recovery, deterministic tied ranking.",
+          "taskId": "task:ledger"
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "7ded0f6f7829eca1f4e7e803546bfb1088b6d5ad291f11c34a4c418441a12d02",
+      "hash": "e1f4cf53100dc29ca6f2fcc7ee9f0526d1ffd86658fb0e85bb38dac21e7a3d21"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "e7820c25-4f80-4505-a862-b99142bd8fd0",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 14,
+      "timestamp": "2026-08-22T23:52:56.927Z",
+      "causationId": "e7820c25-4f80-4505-a862-b99142bd8fd0",
+      "kind": "check.recorded",
+      "payload": {
+        "check": {
+          "completedAt": "2026-08-22T19:00:00.000Z",
+          "definitionId": "check:verify",
+          "evaluatorId": "approved-command",
+          "evaluatorVersion": "1",
+          "evidenceIds": [
+            "evidence:verify:2"
+          ],
+          "id": "result:verify:2",
+          "metadata": {},
+          "score": 1,
+          "startedAt": "2026-08-22T19:00:00.000Z",
+          "status": "passed",
+          "summary": "3/3 protected checks passed: concurrent exactly-once ingestion, torn-tail recovery, deterministic tied ranking.",
+          "taskId": "task:ledger"
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "e1f4cf53100dc29ca6f2fcc7ee9f0526d1ffd86658fb0e85bb38dac21e7a3d21",
+      "hash": "33e2d8b01bd37138a31596464df4c4c10ec407f5041fb7e0a2c0f467a34f9499"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "1ce291f3-cfe6-491f-9363-fb439475c965",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 15,
+      "timestamp": "2026-08-22T23:52:56.933Z",
+      "causationId": "1ce291f3-cfe6-491f-9363-fb439475c965",
+      "taskId": "task:ledger",
+      "kind": "task.submitted",
+      "payload": {
+        "evidenceIds": [
+          "evidence:verify:2"
+        ],
+        "taskId": "task:ledger"
+      },
+      "artifactHashes": {},
+      "previousHash": "33e2d8b01bd37138a31596464df4c4c10ec407f5041fb7e0a2c0f467a34f9499",
+      "hash": "e8c011c7ce5ccccc64ae9c997a5fbfb60fe0d9fc09abf4f241bd2d1553cd4541"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "4e612c64-4b9b-42a1-95b1-5df067105522",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 16,
+      "timestamp": "2026-08-22T23:52:56.939Z",
+      "causationId": "4e612c64-4b9b-42a1-95b1-5df067105522",
+      "kind": "critic.verdict_recorded",
+      "payload": {
+        "verdict": {
+          "attempt": 2,
+          "comparatorWinner": "candidate",
+          "confidence": 0.99,
+          "createdAt": "2026-08-22T19:00:00.000Z",
+          "criteria": [
+            {
+              "criterionId": "correctness",
+              "evidenceIds": [
+                "evidence:verify:2"
+              ],
+              "rationale": "All protected evidence passes.",
+              "score": 0.98,
+              "status": "passed"
+            }
+          ],
+          "criticId": "critic:fresh:2",
+          "direction": "positive",
+          "evidenceIds": [
+            "evidence:verify:2"
+          ],
+          "id": "verdict:ledger:2",
+          "metadata": {},
+          "recommendations": [],
+          "score": 0.98,
+          "sessionId": "demo-penalty-ledger",
+          "summary": "Clean sheet: the durable ledger now satisfies every invariant.",
+          "taskId": "task:ledger",
+          "verdict": "pass"
+        }
+      },
+      "artifactHashes": {},
+      "previousHash": "e8c011c7ce5ccccc64ae9c997a5fbfb60fe0d9fc09abf4f241bd2d1553cd4541",
+      "hash": "e4e4a3981b8eaefa0f6e595b96ca613f2711958b67aa7127161526fc0e61ec21"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "311ae63a-28da-4f0b-9c4b-ca3cb9149f71",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 17,
+      "timestamp": "2026-08-22T23:52:56.945Z",
+      "causationId": "311ae63a-28da-4f0b-9c4b-ca3cb9149f71",
+      "taskId": "task:ledger",
+      "kind": "workspace.integration_checkpoint",
+      "payload": {
+        "changedPaths": [
+          "src/ledger.ts"
+        ],
+        "commitSha": "ffffffffffffffffffffffffffffffffffffffff",
+        "taskId": "task:ledger"
+      },
+      "artifactHashes": {},
+      "previousHash": "e4e4a3981b8eaefa0f6e595b96ca613f2711958b67aa7127161526fc0e61ec21",
+      "hash": "384987b0699249285210b0ef6cf3fbf77587a3693de2dfd7316b79e30a5db052"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "d2126419-8073-4186-87b4-2c95de5bfdc2",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 18,
+      "timestamp": "2026-08-22T23:52:56.951Z",
+      "causationId": "d2126419-8073-4186-87b4-2c95de5bfdc2",
+      "kind": "audit.verdict",
+      "payload": {
+        "evidenceIds": [
+          "evidence:verify:2"
+        ],
+        "fresh": true,
+        "overall": "pass"
+      },
+      "artifactHashes": {},
+      "previousHash": "384987b0699249285210b0ef6cf3fbf77587a3693de2dfd7316b79e30a5db052",
+      "hash": "6dc4265d32898a51edc1beac8427552464c417090d93fa5be385478929979b78"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "cc54ff46-8520-4e25-9389-48fbb45016f5",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 19,
+      "timestamp": "2026-08-22T23:52:56.956Z",
+      "causationId": "cc54ff46-8520-4e25-9389-48fbb45016f5",
+      "kind": "playbook.benchmark",
+      "payload": {
+        "baseline": 0.5,
+        "candidate": 1,
+        "heldOutTask": "ranking-replay",
+        "independentlyReviewed": true
+      },
+      "artifactHashes": {},
+      "previousHash": "6dc4265d32898a51edc1beac8427552464c417090d93fa5be385478929979b78",
+      "hash": "ae7ae73417ef18068c3cc2e17710eb575e783726d473981e518b336f2c3980cf"
+    },
+    {
+      "schemaVersion": 1,
+      "id": "e8eaf9ef-066b-471d-a546-030888f249d9",
+      "sessionId": "demo-penalty-ledger",
+      "sequence": 20,
+      "timestamp": "2026-08-22T23:52:56.963Z",
+      "causationId": "e8eaf9ef-066b-471d-a546-030888f249d9",
+      "kind": "session.status_changed",
+      "payload": {
+        "reason": "Clean sheet: hard gates and the fresh audit passed.",
+        "status": "achieved"
+      },
+      "artifactHashes": {},
+      "previousHash": "ae7ae73417ef18068c3cc2e17710eb575e783726d473981e518b336f2c3980cf",
+      "hash": "12c956b7d9a3a44b149b7e74a1efe291524201ead49a2db84f02677fed56f7bb"
+    }
+  ],
+  "bundleHash": "e49ac9efed993137fec6c568c2dded41a240702b87f78e43a93982fc73a2128a"
+}
