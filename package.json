@@ -3,6 +3,14 @@
   "version": "1.0.0",
   "type": "module",
   "description": "An evidence-driven long-horizon gauntlet harness for coding agents",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zeuzmakessoftware/goalie.git"
+  },
+  "homepage": "https://github.com/zeuzmakessoftware/goalie#readme",
+  "bugs": {
+    "url": "https://github.com/zeuzmakessoftware/goalie/issues"
+  },
   "main": "dist/cli.js",
   "types": "dist/cli.d.ts",
   "exports": {

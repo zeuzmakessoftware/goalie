@@ -9,3 +9,6 @@ coverage/
 .goalie/worktrees/
 .goalie/replays/local/
 .DS_Store
+.codex_tmp/
+.deck_work/
+*.tgz
