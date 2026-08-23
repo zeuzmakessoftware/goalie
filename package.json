@@ -2,31 +2,92 @@
   "name": "goalie",
   "version": "1.0.0",
   "type": "module",
-  "description": "",
-  "main": "index.ts",
-  "scripts": {
-    "start": "tsx index.ts",
-    "typecheck": "tsc --noEmit",
-    "test": "pnpm typecheck"
+  "description": "An evidence-driven long-horizon gauntlet harness for coding agents",
+  "main": "dist/cli.js",
+  "types": "dist/cli.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/cli.d.ts",
+      "import": "./dist/cli.js",
+      "default": "./dist/cli.js"
+    },
+    "./core": {
+      "types": "./dist/core/index.d.ts",
+      "import": "./dist/core/index.js",
+      "default": "./dist/core/index.js"
+    },
+    "./backends": {
+      "types": "./dist/backends/index.d.ts",
+      "import": "./dist/backends/index.js",
+      "default": "./dist/backends/index.js"
+    },
+    "./playbooks": {
+      "types": "./dist/playbooks/index.d.ts",
+      "import": "./dist/playbooks/index.js",
+      "default": "./dist/playbooks/index.js"
+    },
+    "./runtime": {
+      "types": "./dist/runtime/index.d.ts",
+      "import": "./dist/runtime/index.js",
+      "default": "./dist/runtime/index.js"
+    },
+    "./replay": {
+      "types": "./dist/replay/bundle.d.ts",
+      "import": "./dist/replay/bundle.js",
+      "default": "./dist/replay/bundle.js"
+    },
+    "./package.json": "./package.json"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "bin": {
+    "goalie": "dist/cli.js"
+  },
+  "engines": {
+    "node": ">=22"
+  },
+  "files": [
+    "dist",
+    "fixtures",
+    "demo",
+    "docs",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "start": "tsx src/cli.ts",
+    "dev": "tsx src/cli.ts",
+    "build": "tsc -p tsconfig.build.json",
+    "demo:bundle": "tsx scripts/generate-demo-bundle.ts",
+    "prepack": "pnpm build",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run",
+    "test:package": "node scripts/package-smoke.mjs",
+    "test:unit": "vitest run tests",
+    "test:watch": "vitest",
+    "check": "pnpm typecheck && pnpm test && pnpm build && pnpm test:package"
+  },
+  "keywords": [
+    "agents",
+    "cli",
+    "long-horizon",
+    "tui"
+  ],
+  "license": "MIT",
   "dependencies": {
     "@ai-sdk/openai": "^4.0.46",
-    "@clack/prompts": "^1.7.0",
+    "@anthropic-ai/claude-agent-sdk": "^0.3.240",
     "ai": "^7.0.77",
     "dotenv": "^17.4.2",
     "execa": "^10.0.1",
-    "figlet": "^1.11.4",
-    "neo-blessed": "^0.2.0",
+    "ink": "^7.1.1",
+    "react": "^19.2.4",
     "zod": "^4.4.3"
   },
   "devDependencies": {
-    "@types/blessed": "^0.1.27",
-    "@types/figlet": "^1.7.0",
     "@types/node": "^26.2.0",
+    "@types/react": "^19.2.14",
+    "ink-testing-library": "^4.0.0",
     "tsx": "^4.23.12",
-    "typescript": "^7.0.2"
+    "typescript": "^7.0.2",
+    "vitest": "^3.2.4"
   }
 }
