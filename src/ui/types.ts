@@ -131,6 +131,9 @@ export interface AppProps {
   colorMode?: ColorMode;
   motionMode?: MotionMode;
   env?: Readonly<Record<string, string | undefined>>;
+  /** Target duration for a full-motion verdict replay. */
+  animationDurationMs?: number;
+  /** Optional per-frame override, primarily for tests and embedded hosts. */
   animationFrameMs?: number;
   onSubmitPrompt?: (prompt: string) => void;
   onExit?: () => void;

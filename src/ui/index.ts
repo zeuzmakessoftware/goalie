@@ -5,6 +5,7 @@ export { KickoffProgress } from './KickoffProgress.js';
 export type { KickoffProgressItem, KickoffProgressProps } from './KickoffProgress.js';
 export {
   ANIMATION_SEQUENCES,
+  DEFAULT_ANIMATION_DURATION_MS,
   VerdictAnimationQueue,
   advanceAnimation,
   animationEventFromVerdict,

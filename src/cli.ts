@@ -57,6 +57,7 @@ import {
 import { GauntletRunner, type GauntletRunResult, type RunnerBackends } from './session/orchestrator.js';
 import {
   App,
+  DEFAULT_ANIMATION_DURATION_MS,
   GoalPrompt,
   KickoffProgress,
   type BroadcastSession,
@@ -534,7 +535,12 @@ async function executeLiveRun(options: LiveRunOptions): Promise<GauntletRunResul
     const result = await runner.run();
     if (!headless) {
       renderApp();
-      await new Promise(resolveDelay => setTimeout(resolveDelay, noMotion ? 150 : 1_250));
+      const finalReplayMs = noMotion
+        ? 150
+        : motionMode === 'reduced'
+          ? 750
+          : DEFAULT_ANIMATION_DURATION_MS + 100;
+      await new Promise(resolveDelay => setTimeout(resolveDelay, finalReplayMs));
     }
     return result;
   } finally {
@@ -775,7 +781,9 @@ async function replayCommand(
   }
   let session: BroadcastSession = createBroadcastSession(source.banner, objectiveOverride ?? source.goal);
   const noMotion = flag(args, 'no-motion');
-  const frameMs = noMotion ? 40 : Math.max(40, Math.round(110 / speed));
+  const verdictAnimationDurationMs = noMotion
+    ? 120
+    : Math.max(1, Math.round(DEFAULT_ANIMATION_DURATION_MS / speed));
   const playbackDurationMs = targetDurationMs === undefined
     ? undefined
     : Math.max(1_000, targetDurationMs / speed);
@@ -803,7 +811,7 @@ async function replayCommand(
     session: displaySession(),
     interactive: true,
     motionMode: noMotion ? 'none' as const : 'auto' as const,
-    animationFrameMs: frameMs,
+    animationDurationMs: verdictAnimationDurationMs,
     onExit: () => { stopped = true; ink.unmount(); },
     onInterrupt: () => { stopped = true; ink.unmount(); },
     onPause: () => {
@@ -845,7 +853,10 @@ async function replayCommand(
     session = reduceBroadcast(session, event);
     ink.rerender(replayApp());
     if (event.kind === 'critic.verdict_recorded') {
-      await new Promise(resolveDelay => setTimeout(resolveDelay, noMotion ? 120 : frameMs * 7 + 80));
+      await new Promise(resolveDelay => setTimeout(
+        resolveDelay,
+        noMotion ? 120 : verdictAnimationDurationMs + 80,
+      ));
     }
     previousTimestamp = timestamp;
   }

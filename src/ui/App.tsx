@@ -2,6 +2,7 @@ import { useCallback, useEffect, useMemo, useReducer, useRef, useState } from 'r
 import { Box, useInput, useStdout } from 'ink';
 import {
   ANIMATION_SEQUENCES,
+  DEFAULT_ANIMATION_DURATION_MS,
   advanceAnimation,
   animationEventFromVerdict,
   createAnimationQueueState,
@@ -75,7 +76,8 @@ function useVerdictPlayback(
   verdicts: readonly CriticVerdict[],
   treatInitialVerdictsAsHistory: boolean,
   reducedMotion: boolean,
-  frameMs: number,
+  durationMs: number,
+  frameMsOverride?: number,
 ): Playback {
   const [queue, setQueue] = useState<AnimationQueueState>(createAnimationQueueState);
   const [frame, setFrame] = useState(0);
@@ -126,6 +128,7 @@ function useVerdictPlayback(
     }
 
     const frames = ANIMATION_SEQUENCES[active.kind].frames;
+    const frameMs = frameMsOverride ?? Math.max(40, Math.round(durationMs / frames.length));
     let cursor = reducedMotion ? frames.length - 1 : 0;
     setFrame(cursor);
     let timer: ReturnType<typeof setTimeout> | undefined;
@@ -144,11 +147,14 @@ function useVerdictPlayback(
       );
     };
 
-    timer = setTimeout(tick, reducedMotion ? Math.max(650, frameMs) : frameMs);
+    timer = setTimeout(
+      tick,
+      reducedMotion ? Math.max(650, frameMsOverride ?? 0) : frameMs,
+    );
     return () => {
       if (timer !== undefined) clearTimeout(timer);
     };
-  }, [active?.key, frameMs, reducedMotion]);
+  }, [active?.key, durationMs, frameMsOverride, reducedMotion]);
 
   const replay = useCallback(() => {
     const source = lastEvent ?? queue.active;
@@ -172,7 +178,8 @@ export function App({
   colorMode = 'auto',
   motionMode = 'auto',
   env = process.env,
-  animationFrameMs = 110,
+  animationDurationMs = DEFAULT_ANIMATION_DURATION_MS,
+  animationFrameMs,
   onSubmitPrompt,
   onExit,
   onInterrupt,
@@ -201,7 +208,8 @@ export function App({
     verdicts,
     session.verdicts !== undefined,
     preferences.reducedMotion,
-    Math.max(40, animationFrameMs),
+    Math.max(1, animationDurationMs),
+    animationFrameMs === undefined ? undefined : Math.max(40, animationFrameMs),
   );
 
   useEffect(() => {

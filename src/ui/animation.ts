@@ -26,6 +26,9 @@ export interface AnimationSequence {
   compactFrames: readonly string[];
 }
 
+/** Full-motion verdict replays are deliberately long enough to read and follow. */
+export const DEFAULT_ANIMATION_DURATION_MS = 4_000;
+
 function normalizeFrames(frames: readonly RawFrame[]): readonly string[] {
   const height = Math.max(...frames.map(frame => frame.length));
   const width = Math.max(
