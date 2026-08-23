@@ -408,7 +408,19 @@ export class GitWorktreeManager {
     }
     const preMergeHead = verifiedIntegration.headSha;
     try {
-      await git(integration.path, ['merge', '--squash', '--no-commit', worker.branch]);
+      // Some Git versions resolve committer identity before attempting a
+      // squash merge, including merges that will ultimately conflict. Keep
+      // harness-owned integration behavior independent of host Git config.
+      await git(integration.path, [
+        '-c',
+        'user.name=Goalie Harness',
+        '-c',
+        'user.email=goalie@localhost',
+        'merge',
+        '--squash',
+        '--no-commit',
+        worker.branch,
+      ]);
     } catch (error) {
       const conflicts = (
         await git(integration.path, ['diff', '--name-only', '--diff-filter=U', '--'], [0, 1])

@@ -142,6 +142,7 @@ test('the offense and defense matchup stays visible when a detail tab changes', 
       terminalSize={{ columns: 100, rows: 28 }}
       colorMode="none"
       motionMode="none"
+      env={{ GOALIE_ASCII: '1' }}
     />,
   );
   cleanup.push(screen.unmount);
