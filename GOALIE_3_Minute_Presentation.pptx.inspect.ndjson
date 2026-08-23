@@ -1,0 +1,177 @@
+{"kind":"deck","id":"pr/vfg11c","name":"Deck"}
+{"kind":"layout","layoutId":"/ppt/slideMasters/slideMaster1.xml","name":"","type":"master","placeholders":[{"name":"title","type":"title","textPreview":"Click to edit the title text format"},{"name":"body","type":"body","textPreview":"Click to edit the outline text format | Second Outline Level | Third Outline Level | Fourth Outline Level | Fifth Outline Level | Sixth O..."}]}
+{"kind":"layout","layoutId":"/ppt/slideLayouts/slideLayout1.xml","name":"Title Slide","type":"title","placeholders":[{"name":"title","type":"title"},{"name":"subtitle","type":"subtitle"}]}
+{"kind":"slide","id":"sl/y90nupkv","slide":1,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":9}
+{"kind":"shape","id":"sh/ul4vaxgb","slide":1,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/vmdcj2xw","slide":1,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/4r6dg7et","slide":1,"text":"GOALIE","textPreview":"GOALIE","textChars":6,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/5sfepcfe","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/ipovexwn","slide":1,"text":"LONG-HORIZON AGENTS BUILD DAY","textPreview":"LONG-HORIZON AGENTS BUILD DAY","textChars":29,"textLines":1,"bbox":[63.99,96,499.96,23.96]}
+{"kind":"textbox","id":"sh/3qxwn2x8","slide":1,"name":"project-name","text":"GOALIE","textPreview":"GOALIE","textChars":6,"textLines":1,"bbox":[63.99,135,1019.98,117.96]}
+{"kind":"textbox","id":"sh/sfqdkrep","slide":1,"name":"one-line-value-proposition","text":"The champion of long-horizon harnesses.","textPreview":"The champion of long-horizon harnesses.","textChars":39,"textLines":1,"bbox":[67.99,266.99,849.98,65.95]}
+{"kind":"textbox","id":"sh/dgzetcfa","slide":1,"text":"JOSEPH KARAM  ·  AUG 22, 2026","textPreview":"JOSEPH KARAM  ·  AUG 22, 2026","textChars":29,"textLines":1,"bbox":[67.99,353.99,499.96,23.96]}
+{"kind":"shape","id":"sh/0bmd476t","slide":1,"name":"hero-caption-band","bbox":[0,672,1279.97,47.96]}
+{"kind":"textbox","id":"sh/zadcv2p8","slide":1,"text":"OFFENSE  ·  DEFENSE  ·  EVIDENCE","textPreview":"OFFENSE  ·  DEFENSE  ·  EVIDENCE","textChars":32,"textLines":1,"bbox":[32.01,685.98,359.96,17.95]}
+{"kind":"textbox","id":"sh/e94v2hon","slide":1,"text":"THE HARNESS THAT LEARNS FROM EVERY MISS","textPreview":"THE HARNESS THAT LEARNS FROM EVERY MISS","textChars":39,"textLines":1,"bbox":[780.02,685.98,459.97,17.95]}
+{"kind":"image","id":"im/eh4fmdgv","slide":1,"name":"","alt":"Soccer ball facing a goal under stadium lights","bbox":[0,397.98,1279.97,321.98]}
+{"kind":"notes","id":"nt/y90nupkv","slide":1,"text":"0:00–0:12 — Hello everyone, my name is Joseph Karam, and this is Goalie—the champion of long-horizon harnesses.\n\n[Sources]\n- OpenAI ImageGen — generated soccer-field cover visual\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer — inherited deck context\n[/Sources]"}
+{"kind":"slide","id":"sl/hwbqtkby","slide":2,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":11}
+{"kind":"shape","id":"sh/hcvy14ne","slide":2,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/gbmxszmt","slide":2,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/fadgzu58","slide":2,"text":"THE CHALLENGE","textPreview":"THE CHALLENGE","textChars":13,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/u94fqp4n","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/p0vy54na","slide":2,"text":"THE SETUP","textPreview":"THE SETUP","textChars":9,"textLines":1,"bbox":[63.99,100.01,169.97,19.96]}
+{"kind":"textbox","id":"sh/4zmxwzmp","slide":2,"text":"Ball\nGoal\nDefense\nCoach","textPreview":"Ball | Goal | Defense | Coach","textChars":23,"textLines":4,"bbox":[63.99,144.98,149.97,169.97]}
+{"kind":"shape","id":"sh/mlgvq147","slide":2,"name":"editorial-rule","bbox":[238,108.02,0.94,509.97]}
+{"kind":"textbox","id":"sh/nmpcj6ls","slide":2,"text":"01 / THE CHALLENGE","textPreview":"01 / THE CHALLENGE","textChars":18,"textLines":1,"bbox":[285.01,98,499.96,23.96]}
+{"kind":"textbox","id":"sh/onydsbmd","slide":2,"name":"problem-title","text":"A goal is easy.\nA defended goal is not.","textPreview":"A goal is easy. | A defended goal is not.","textChars":39,"textLines":2,"bbox":[285.01,139.99,899.98,141.96]}
+{"kind":"textbox","id":"sh/9o7ulg3y","slide":2,"text":"Agents can take a task. Long-horizon work adds resistance: mistakes compound before the finish.","textPreview":"Agents can take a task. Long-horizon work adds resistance: mistakes compound before the finish.","textChars":95,"textLines":1,"bbox":[285.01,312,779.98,91.96]}
+{"kind":"textbox","id":"sh/a9gvulkj","slide":2,"name":"primary-problem-metric","text":"1st","textPreview":"1st","textChars":3,"textLines":1,"bbox":[285.01,451.99,259.96,95.96]}
+{"kind":"textbox","id":"sh/ba9cn6l4","slide":2,"text":"ATTEMPT\nEven strong players need a coach.","textPreview":"ATTEMPT | Even strong players need a coach.","textChars":41,"textLines":2,"bbox":[569.99,466.02,559.97,69.96]}
+{"kind":"shape","id":"sh/wbidwb29","slide":2,"name":"accent-rule","bbox":[285.01,580.01,854.97,1.97]}
+{"kind":"textbox","id":"sh/xcrupg3u","slide":2,"text":"The question is not whether an agent can try. It is how the agent improves.","textPreview":"The question is not whether an agent can try. It is how the agent improves.","textChars":75,"textLines":1,"bbox":[285.01,595.01,849.98,29.97]}
+{"kind":"notes","id":"nt/hwbqtkby","slide":2,"text":"0:12–0:48 — Quick question: who watched the World Cup this summer? Raise your hand. If you didn’t, are you at least familiar with soccer—or fútbol? Great. Give anyone here a ball and an empty goal, and I hope we can score. Put Argentina’s World Cup team in defense, and unless you’re Lamine Yamal, probably not on the first try. Long-horizon agent tasks work the same way: the goal is clear, but the path is defended by compounding mistakes.\n\n[Sources]\n- https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-final-report-highlights\n[/Sources]"}
+{"kind":"slide","id":"sl/ofy9wn61","slide":3,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":7}
+{"kind":"shape","id":"sh/hwzihwzi","slide":3,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/wv61obyx","slide":3,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/4nuhs7uh","slide":3,"text":"INSIGHT","textPreview":"INSIGHT","textChars":7,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/po3ilcvm","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/21szqxcb","slide":3,"text":"02 / THE INSIGHT","textPreview":"02 / THE INSIGHT","textChars":16,"textLines":1,"bbox":[63.99,91.99,499.96,23.96]}
+{"kind":"textbox","id":"sh/32l0j2dw","slide":3,"name":"core-insight","text":"“Agents need a coach,\nnot one perfect first try.”","textPreview":"“Agents need a coach, | not one perfect first try.”","textChars":49,"textLines":2,"bbox":[109.98,185.01,1059.97,179.98]}
+{"kind":"shape","id":"sh/cruhwrud","slide":3,"name":"accent-rule","bbox":[430,420.02,419.98,1.97]}
+{"kind":"textbox","id":"sh/ds3ipcvy","slide":3,"text":"Feedback turns each failed attempt into a better scoring strategy.","textPreview":"Feedback turns each failed attempt into a better scoring strategy.","textChars":66,"textLines":1,"bbox":[270.01,462.01,739.96,69.96]}
+{"kind":"textbox","id":"sh/qpczuhc7","slide":3,"text":"LONG-HORIZON DESIGN PRINCIPLE","textPreview":"LONG-HORIZON DESIGN PRINCIPLE","textChars":29,"textLines":1,"bbox":[410,589.98,459.97,21.96]}
+{"kind":"notes","id":"nt/ofy9wn61","slide":3,"text":"0:48–1:06 — But add a coach after every miss—someone who explains how to improve the scoring strategy—and eventually you score. I believe long-horizon agents need that same relationship with failure.\n\n[Sources]\n- User-provided presentation script\n[/Sources]"}
+{"kind":"slide","id":"sl/jyx0ra1s","slide":4,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":16}
+{"kind":"shape","id":"sh/sjut8vmd","slide":4,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/3elcv65w","slide":4,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/idcb2lob","slide":4,"text":"SOLUTION","textPreview":"SOLUTION","textChars":8,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/8jq9c72t","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/tkjq5c3e","slide":4,"text":"03 / SOLUTION","textPreview":"03 / SOLUTION","textChars":13,"textLines":1,"bbox":[63.99,96,499.96,23.96]}
+{"kind":"textbox","id":"sh/6x8rahk3","slide":4,"name":"solution-title","text":"Goalie turns every miss into the next attempt.","textPreview":"Goalie turns every miss into the next attempt.","textChars":46,"textLines":1,"bbox":[63.99,139.99,979.96,71.96]}
+{"kind":"textbox","id":"sh/7ih83mlo","slide":4,"text":"Two agent roles. One evidence-driven loop.","textPreview":"Two agent roles. One evidence-driven loop.","textChars":42,"textLines":1,"bbox":[65.99,226.02,699.97,37.95]}
+{"kind":"shape","id":"sh/gna9gr25","slide":4,"name":"process-line","bbox":[130.02,386,849.98,1.97]}
+{"kind":"shape","id":"sh/hoja9w3q","slide":4,"bbox":[70,349.98,71.96,71.96]}
+{"kind":"textbox","id":"sh/ulsrehkz","slide":4,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[70,371,71.96,25.97]}
+{"kind":"textbox","id":"sh/vm1s7mlk","slide":4,"text":"OFFENSE","textPreview":"OFFENSE","textChars":7,"textLines":1,"bbox":[67.99,451.99,259.96,35.98]}
+{"kind":"textbox","id":"sh/wr694nm1","slide":4,"text":"Takes the shot with the context it has","textPreview":"Takes the shot with the context it has","textChars":38,"textLines":1,"bbox":[67.99,499.99,284.98,69.96]}
+{"kind":"shape","id":"sh/xsfqxs36","slide":4,"bbox":[440.01,349.98,71.96,71.96]}
+{"kind":"textbox","id":"sh/do761ova","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[440.01,371,71.96,25.97]}
+{"kind":"textbox","id":"sh/cnyp8jep","slide":4,"text":"DEFENSE","textPreview":"DEFENSE","textChars":7,"textLines":1,"bbox":[438.01,451.99,259.96,35.98]}
+{"kind":"textbox","id":"sh/bmpozed4","slide":4,"text":"Scores the result and exposes the biggest gap","textPreview":"Scores the result and exposes the biggest gap","textChars":45,"textLines":1,"bbox":[438.01,499.99,284.98,69.96]}
+{"kind":"shape","id":"sh/qlg769wj","slide":4,"bbox":[809.99,349.98,71.96,71.96]}
+{"kind":"textbox","id":"sh/lcr658v6","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[809.99,371,71.96,25.97]}
+{"kind":"textbox","id":"sh/0bipc3el","slide":4,"text":"RETRY","textPreview":"RETRY","textChars":5,"textLines":1,"bbox":[807.99,451.99,259.96,35.98]}
+{"kind":"textbox","id":"sh/zq9o3ydg","slide":4,"text":"Feeds the gap back until the final gate passes","textPreview":"Feeds the gap back until the final gate passes","textChars":46,"textLines":1,"bbox":[807.99,499.99,284.98,69.96]}
+{"kind":"textbox","id":"sh/yp07atwv","slide":4,"text":"POSITIVE → GOAL  ·  NEGATIVE → SAVE  ·  UNCERTAIN → VAR","textPreview":"POSITIVE → GOAL  ·  NEGATIVE → SAVE  ·  UNCERTAIN → VAR","textChars":55,"textLines":1,"bbox":[70,641.99,879.95,21.96]}
+{"kind":"notes","id":"nt/jyx0ra1s","slide":4,"text":"1:06–1:32 — That is Goalie. Offense tackles the problem with the context it has. Defense scrutinizes the result, scores it, and identifies the biggest gap. That gap goes back to offense for the next attempt. Positive trajectory plays GOAL, negative plays SAVE, and uncertainty goes to VAR.\n\n[Sources]\n- README.md\n- docs/architecture.md\n[/Sources]"}
+{"kind":"slide","id":"sl/i107q5of","slide":5,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":9}
+{"kind":"shape","id":"sh/p076tgv6","slide":5,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/ozepkbul","slide":5,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/m583eds3","slide":5,"text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/76hk7ito","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/87qlgna9","slide":5,"text":"04 / PRODUCT DEMO","textPreview":"04 / PRODUCT DEMO","textChars":17,"textLines":1,"bbox":[63.99,91.99,499.96,23.96]}
+{"kind":"textbox","id":"sh/98z298bu","slide":5,"name":"demo-title","text":"Watch the improvement loop—not just the final answer.","textPreview":"Watch the improvement loop—not just the final answer.","textChars":53,"textLines":1,"bbox":[63.99,132.02,929.95,61.95]}
+{"kind":"shape","id":"sh/yho3atsr","slide":5,"name":"product-demo-placeholder","bbox":[63.99,220.01,1151.96,385.97]}
+{"kind":"textbox","id":"sh/zihk3ytc","slide":5,"text":"PRE-RECORDED DEMO\nGOAL  ·  SAVE  ·  RETRY","textPreview":"PRE-RECORDED DEMO | GOAL  ·  SAVE  ·  RETRY","textChars":41,"textLines":2,"bbox":[340.01,346.02,599.96,91.96]}
+{"kind":"textbox","id":"sh/kjqlc3ax","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[84.02,242,49.97,19.96]}
+{"kind":"textbox","id":"sh/lkz258bi","slide":5,"text":"Notice how the critic’s largest gap becomes the next attempt’s coaching signal.","textPreview":"Notice how the critic’s largest gap becomes the next attempt’s coaching signal.","textChars":79,"textLines":1,"bbox":[63.99,628.01,839.96,27.97]}
+{"kind":"textbox","id":"sh/ids3mxsb","slide":5,"text":"PLAY DEMO →","textPreview":"PLAY DEMO →","textChars":11,"textLines":1,"bbox":[1020.02,628.01,195.97,23.96]}
+{"kind":"notes","id":"nt/i107q5of","slide":5,"text":"1:32–1:58 — Let’s see it. Full disclosure: long-horizon tasks take a while, so this is prerecorded—but it works. Watch the feedback loop: each defensive save becomes the next offensive coaching signal. [Play approximately 20 seconds of the recording. Pause after the first save-to-retry transition.]\n\n[Sources]\n- docs/demo.md\n[/Sources]"}
+{"kind":"slide","id":"sl/x8f69ofe","slide":6,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":20}
+{"kind":"shape","id":"sh/yxc72dwf","slide":6,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/m9szm1kf","slide":6,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/na1gf610","slide":6,"text":"ARCHITECTURE","textPreview":"ARCHITECTURE","textChars":12,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/8bahobil","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/9cjyhgj6","slide":6,"text":"05 / SYSTEM","textPreview":"05 / SYSTEM","textChars":11,"textLines":1,"bbox":[63.99,91.99,499.96,23.96]}
+{"kind":"textbox","id":"sh/adszq10r","slide":6,"name":"architecture-title","text":"The harness owns\nthe match.","textPreview":"The harness owns | the match.","textChars":27,"textLines":2,"bbox":[63.99,135.99,559.97,115.96]}
+{"kind":"textbox","id":"sh/ve1gj61w","slide":6,"text":"Agents propose. The host owns the contract, checks, state, budget, and final gate.","textPreview":"Agents propose. The host owns the contract, checks, state, budget, and final gate.","textChars":82,"textLines":1,"bbox":[65.99,279.99,459.97,117.96]}
+{"kind":"textbox","id":"sh/wfahsbih","slide":6,"text":"TECHNICAL EDGE","textPreview":"TECHNICAL EDGE","textChars":14,"textLines":1,"bbox":[65.99,455.02,179.98,19.96]}
+{"kind":"textbox","id":"sh/xg3ylgj2","slide":6,"text":"Fresh critics + hard checks stop confident text from becoming false success.","textPreview":"Fresh critics + hard checks stop confident text from becoming false success.","textChars":76,"textLines":1,"bbox":[65.99,488.01,429.96,71.96]}
+{"kind":"shape","id":"sh/qh8fehk7","slide":6,"name":"connector-1","bbox":[724.01,211.01,1.97,41.95]}
+{"kind":"shape","id":"sh/rihg7m1s","slide":6,"bbox":[689.99,148.99,69.96,69.96]}
+{"kind":"textbox","id":"sh/tcn2dk3a","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[689.99,172.01,69.96,21.96]}
+{"kind":"textbox","id":"sh/sbe1kf2p","slide":6,"text":"GOAL","textPreview":"GOAL","textChars":4,"textLines":1,"bbox":[790,143.02,349.95,27.97]}
+{"kind":"textbox","id":"sh/7a50bal4","slide":6,"text":"Confirmed success contract","textPreview":"Confirmed success contract","textChars":26,"textLines":1,"bbox":[790,179,349.95,37.95]}
+{"kind":"shape","id":"sh/69wji54z","slide":6,"name":"rule-1","bbox":[790,225,349.95,0.94]}
+{"kind":"shape","id":"sh/h072hk3m","slide":6,"name":"connector-2","bbox":[724.01,338.99,1.97,41.95]}
+{"kind":"shape","id":"sh/gzy1oz21","slide":6,"bbox":[689.99,277,69.96,69.96]}
+{"kind":"textbox","id":"sh/fy5kfulg","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[689.99,300.02,69.96,21.96]}
+{"kind":"textbox","id":"sh/udwjmpkv","slide":6,"text":"OFFENSE","textPreview":"OFFENSE","textChars":7,"textLines":1,"bbox":[790,270.99,349.95,27.97]}
+{"kind":"textbox","id":"sh/x43i5032","slide":6,"text":"Plan → tools → checkpoint","textPreview":"Plan → tools → checkpoint","textChars":25,"textLines":1,"bbox":[790,307.01,349.95,37.95]}
+{"kind":"shape","id":"sh/w3u1cvmh","slide":6,"name":"rule-2","bbox":[790,353.01,349.95,0.94]}
+{"kind":"shape","id":"sh/5s721cfe","slide":6,"name":"connector-3","bbox":[724.01,467,1.97,41.95]}
+{"kind":"shape","id":"sh/4ry187et","slide":6,"bbox":[689.99,405.01,69.96,69.96]}
+{"kind":"textbox","id":"sh/j65kz2x8","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[689.99,427.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/i5wj6xwn","slide":6,"text":"DEFENSE","textPreview":"DEFENSE","textChars":7,"textLines":1,"bbox":[790,399,349.95,27.97]}
+{"kind":"textbox","id":"sh/tw725cfa","slide":6,"text":"Critic + deterministic checks","textPreview":"Critic + deterministic checks","textChars":29,"textLines":1,"bbox":[790,434.99,349.95,37.95]}
+{"kind":"shape","id":"sh/svylc7ep","slide":6,"name":"rule-3","bbox":[790,480.98,349.95,0.94]}
+{"kind":"shape","id":"sh/rupk3mxk","slide":6,"bbox":[689.99,532.99,69.96,69.96]}
+{"kind":"textbox","id":"sh/6tg3ahwz","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[689.99,556.01,69.96,21.96]}
+{"kind":"textbox","id":"sh/90n2tsf6","slide":6,"text":"CHAMPION","textPreview":"CHAMPION","textChars":8,"textLines":1,"bbox":[790,527.02,349.95,27.97]}
+{"kind":"textbox","id":"sh/8zu10nel","slide":6,"text":"Verified integration artifact","textPreview":"Verified integration artifact","textChars":29,"textLines":1,"bbox":[790,563,349.95,37.95]}
+{"kind":"shape","id":"sh/y5szatcj","slide":6,"name":"rule-4","bbox":[790,609,349.95,0.94]}
+{"kind":"notes","id":"nt/x8f69ofe","slide":6,"text":"1:58–2:18 — Under the animation, the harness owns the match: the goal contract, deterministic checks, durable state, budget, and final gate. The offense proposes; the defense critiques; the host verifies. The animation is the broadcast, not the proof.\n\n[Sources]\n- README.md\n- docs/architecture.md\n[/Sources]"}
+{"kind":"slide","id":"sl/gnmp4jqx","slide":7,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":18}
+{"kind":"shape","id":"sh/pgj6l8ze","slide":7,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/2d8nqtgn","slide":7,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/nehojyh8","slide":7,"text":"THE GATE","textPreview":"THE GATE","textChars":8,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/0bq5ojyx","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/1cz6hoz2","slide":7,"text":"06 / THE GATE","textPreview":"06 / THE GATE","textChars":13,"textLines":1,"bbox":[63.99,91.99,499.96,23.96]}
+{"kind":"textbox","id":"sh/e98nm9gr","slide":7,"name":"evidence-title","text":"Victory requires the final gate—not a good-looking answer.","textPreview":"Victory requires the final gate—not a good-looking answer.","textChars":58,"textLines":1,"bbox":[63.99,135,999.95,67.96]}
+{"kind":"textbox","id":"sh/fahofehc","slide":7,"text":"REQUIRED GATES","textPreview":"REQUIRED GATES","textChars":14,"textLines":1,"bbox":[65.99,259.99,239.96,21.96]}
+{"kind":"textbox","id":"sh/k7up0ny1","slide":7,"name":"primary-success-metric","text":"100%","textPreview":"100%","textChars":4,"textLines":1,"bbox":[63.99,300.02,359.96,119.96]}
+{"kind":"textbox","id":"sh/l836tszm","slide":7,"text":"Hard checks and the latest fresh audit must pass.","textPreview":"Hard checks and the latest fresh audit must pass.","textChars":49,"textLines":1,"bbox":[65.99,438.01,419.98,91.96]}
+{"kind":"shape","id":"sh/t4z6d8rq","slide":7,"name":"metric-divider","bbox":[540.02,252.02,0.94,329.95]}
+{"kind":"textbox","id":"sh/83q5knq5","slide":7,"text":"1","textPreview":"1","textChars":1,"textLines":1,"bbox":[610.02,250.02,189.96,53.97]}
+{"kind":"textbox","id":"sh/72hobi9k","slide":7,"text":"GAP","textPreview":"GAP","textChars":3,"textLines":1,"bbox":[820.01,253.98,189.96,21.96]}
+{"kind":"textbox","id":"sh/61onid8z","slide":7,"text":"Largest evidence gap coaches retry","textPreview":"Largest evidence gap coaches retry","textChars":34,"textLines":1,"bbox":[820.01,283.99,349.95,34.96]}
+{"kind":"shape","id":"sh/l0f698re","slide":7,"name":"metric-rule-1","bbox":[610.02,340.01,539.98,0.94]}
+{"kind":"textbox","id":"sh/kz65g3q9","slide":7,"text":"3","textPreview":"3","textChars":1,"textLines":1,"bbox":[610.02,362,189.96,53.97]}
+{"kind":"textbox","id":"sh/jyxo7y9o","slide":7,"text":"STATES","textPreview":"STATES","textChars":6,"textLines":1,"bbox":[820.01,366.01,189.96,21.96]}
+{"kind":"textbox","id":"sh/yxonet83","slide":7,"text":"GOAL · SAVE · VAR","textPreview":"GOAL · SAVE · VAR","textChars":17,"textLines":1,"bbox":[820.01,396.02,349.95,34.96]}
+{"kind":"shape","id":"sh/xwf65ori","slide":7,"name":"metric-rule-2","bbox":[610.02,451.99,539.98,0.94]}
+{"kind":"textbox","id":"sh/wv65c3qx","slide":7,"text":"0","textPreview":"0","textChars":1,"textLines":1,"bbox":[610.02,473.99,189.96,53.97]}
+{"kind":"textbox","id":"sh/m1k36pov","slide":7,"text":"SHORTCUTS","textPreview":"SHORTCUTS","textChars":9,"textLines":1,"bbox":[820.01,478,189.96,21.96]}
+{"kind":"textbox","id":"sh/n2dkfupg","slide":7,"text":"Failed checks cannot be waived","textPreview":"Failed checks cannot be waived","textChars":30,"textLines":1,"bbox":[820.01,508.01,349.95,34.96]}
+{"kind":"textbox","id":"sh/o3ml8z61","slide":7,"text":"BOUNDED BY TIME  ·  TURNS  ·  COST  ·  PLATEAU","textPreview":"BOUNDED BY TIME  ·  TURNS  ·  COST  ·  PLATEAU","textChars":46,"textLines":1,"bbox":[610.02,589.98,539.98,21.96]}
+{"kind":"notes","id":"nt/gnmp4jqx","slide":7,"text":"2:18–2:34 — The task only wins when every required check and the fresh final audit pass. A confident answer cannot waive failed evidence. Goalie keeps retrying within explicit time, turn, cost, and plateau limits.\n\n[Sources]\n- README.md\n- docs/architecture.md\n[/Sources]"}
+{"kind":"slide","id":"sl/fu1gfa1s","slide":8,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":14}
+{"kind":"shape","id":"sh/wrq587yx","slide":8,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/jeh43mxo","slide":8,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/yd8nahg3","slide":8,"text":"WHY FAILURE","textPreview":"WHY FAILURE","textChars":11,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/lgjm5wfe","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/kfa5cry9","slide":8,"text":"07 / WHY FAILURE MATTERS","textPreview":"07 / WHY FAILURE MATTERS","textChars":24,"textLines":1,"bbox":[63.99,91.99,499.96,23.96]}
+{"kind":"textbox","id":"sh/7i147mxk","slide":8,"name":"why-now-title","text":"Failure is fuel for long-horizon agents.","textPreview":"Failure is fuel for long-horizon agents.","textChars":40,"textLines":1,"bbox":[63.99,135.99,779.98,67.96]}
+{"kind":"textbox","id":"sh/6hsne1gz","slide":8,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[63.99,270.01,79.97,29.97]}
+{"kind":"textbox","id":"sh/qxkfqpsn","slide":8,"text":"Longer tasks","textPreview":"Longer tasks","textChars":12,"textLines":1,"bbox":[180.02,266,359.96,37.95]}
+{"kind":"textbox","id":"sh/rytgzu98","slide":8,"text":"More coupled steps create more chances to drift.","textPreview":"More coupled steps create more chances to drift.","textChars":48,"textLines":1,"bbox":[569.99,270.01,589.95,53.97]}
+{"kind":"shape","id":"sh/sz2xszad","slide":8,"name":"reason-rule-1","bbox":[63.99,348.02,1095.95,0.94]}
+{"kind":"textbox","id":"sh/d0by14ry","slide":8,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[63.99,390.01,79.97,29.97]}
+{"kind":"textbox","id":"sh/e1kfu9sj","slide":8,"text":"Coached recovery","textPreview":"Coached recovery","textChars":16,"textLines":1,"bbox":[180.02,386,359.96,37.95]}
+{"kind":"textbox","id":"sh/f2tg3e94","slide":8,"text":"Each miss becomes focused context for the next attempt.","textPreview":"Each miss becomes focused context for the next attempt.","textChars":55,"textLines":1,"bbox":[569.99,390.01,589.95,53.97]}
+{"kind":"shape","id":"sh/03mhwjap","slide":8,"name":"reason-rule-2","bbox":[63.99,468.02,1095.95,0.94]}
+{"kind":"textbox","id":"sh/14vy5ora","slide":8,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[63.99,510.01,79.97,29.97]}
+{"kind":"textbox","id":"sh/u50fi5sf","slide":8,"text":"Durable progress","textPreview":"Durable progress","textChars":16,"textLines":1,"bbox":[180.02,506,359.96,37.95]}
+{"kind":"textbox","id":"sh/v69gra90","slide":8,"text":"Evidence, checkpoints, and fresh audits preserve what was learned.","textPreview":"Evidence, checkpoints, and fresh audits preserve what was learned.","textChars":66,"textLines":1,"bbox":[569.99,510.01,589.95,53.97]}
+{"kind":"shape","id":"sh/xkfix8bi","slide":8,"name":"reason-rule-3","bbox":[63.99,588.02,1095.95,0.94]}
+{"kind":"notes","id":"nt/fu1gfa1s","slide":8,"text":"2:34–2:53 — So why does the goalie keep blocking the model? Because failure is fuel. Argentina lost to Saudi Arabia in its first 2022 World Cup match, learned, recovered, and became champion. Humans use failure to get better. Agents should too.\n\n[Sources]\n- https://www.fifa.com/es/articles/el-camino-de-argentina-hacia-el-titulo-de-la-copa-mundial\n[/Sources]"}
+{"kind":"slide","id":"sl/udsvah03","slide":9,"title":"✦  LONG-HORIZON BUILD DAY","textShapes":15}
+{"kind":"shape","id":"sh/4netof6x","slide":9,"name":"top-bar","bbox":[0,0,1279.97,57.98]}
+{"kind":"textbox","id":"sh/3m5sfapc","slide":9,"text":"✦  LONG-HORIZON BUILD DAY","textPreview":"✦  LONG-HORIZON BUILD DAY","textChars":25,"textLines":1,"bbox":[30.01,17.99,259.96,21.96]}
+{"kind":"textbox","id":"sh/ilwbm5or","slide":9,"text":"CLOSE","textPreview":"CLOSE","textChars":5,"textLines":1,"bbox":[820.01,17.99,329.95,21.96]}
+{"kind":"textbox","id":"sh/hk3adk76","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1180.01,17.99,69.96,21.96]}
+{"kind":"textbox","id":"sh/wjutkf61","slide":9,"text":"08 / CLOSE","textPreview":"08 / CLOSE","textChars":10,"textLines":1,"bbox":[63.99,96,499.96,23.96]}
+{"kind":"textbox","id":"sh/vilsbapg","slide":9,"name":"closing-title","text":"Failure is not the opposite\nof success. It is the loop.","textPreview":"Failure is not the opposite | of success. It is the loop.","textChars":55,"textLines":2,"bbox":[63.99,139.99,779.98,149.97]}
+{"kind":"textbox","id":"sh/uhcbi5ov","slide":9,"text":"JOSEPH KARAM","textPreview":"JOSEPH KARAM","textChars":12,"textLines":1,"bbox":[67.99,349.98,299.98,27.97]}
+{"kind":"textbox","id":"sh/1g7up47q","slide":9,"text":"Creator and builder of Goalie.","textPreview":"Creator and builder of Goalie.","textChars":30,"textLines":1,"bbox":[67.99,392.01,329.95,49.97]}
+{"kind":"textbox","id":"sh/0fytwz65","slide":9,"text":"GOALIE CLI","textPreview":"GOALIE CLI","textChars":10,"textLines":1,"bbox":[456,349.98,299.98,27.97]}
+{"kind":"textbox","id":"sh/0j6ds3eh","slide":9,"text":"Open-source harness for long-horizon coding agents.","textPreview":"Open-source harness for long-horizon coding agents.","textChars":51,"textLines":1,"bbox":[456,392.01,329.95,49.97]}
+{"kind":"textbox","id":"sh/lkfel8vm","slide":9,"text":"YOUR NEXT MOVE","textPreview":"YOUR NEXT MOVE","textChars":14,"textLines":1,"bbox":[844.01,349.98,299.98,27.97]}
+{"kind":"textbox","id":"sh/yhovqdwb","slide":9,"text":"Try it on a hard task. Break it. Improve it.","textPreview":"Try it on a hard task. Break it. Improve it.","textChars":44,"textLines":1,"bbox":[844.01,392.01,329.95,49.97]}
+{"kind":"shape","id":"sh/zixwjidw","slide":9,"name":"closing-rule","bbox":[63.99,493.98,1095.95,1.97]}
+{"kind":"textbox","id":"sh/cfmdo3e5","slide":9,"text":"WHAT I NEED NEXT","textPreview":"WHAT I NEED NEXT","textChars":16,"textLines":1,"bbox":[63.99,534.99,279.95,21.96]}
+{"kind":"textbox","id":"sh/dgfeh8fq","slide":9,"text":"Find Goalie on GitHub—and give the project a star.","textPreview":"Find Goalie on GitHub—and give the project a star.","textChars":50,"textLines":1,"bbox":[63.99,571.99,769.97,59.98]}
+{"kind":"textbox","id":"sh/qt4vmtwz","slide":9,"text":"GITHUB / QR","textPreview":"GITHUB / QR","textChars":11,"textLines":1,"bbox":[920.01,574,239.96,23.96]}
+{"kind":"textbox","id":"sh/budwfyxk","slide":9,"text":"STAR GOALIE →","textPreview":"STAR GOALIE →","textChars":13,"textLines":1,"bbox":[920.01,610.02,239.96,33.98]}
+{"kind":"notes","id":"nt/udsvah03","slide":9,"text":"2:53–3:00 — People say, ‘Failure is not an option.’ For the agentic future, I believe failure is the only option—because it is how the next attempt becomes better. Thank you. Find Goalie on GitHub; I need stars.\n\n[Sources]\n- User-provided presentation script\n[/Sources]"}

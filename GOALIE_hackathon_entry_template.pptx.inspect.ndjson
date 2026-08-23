@@ -1,0 +1,177 @@
+{"kind":"deck","id":"pr/yk7xmc","name":"Deck"}
+{"kind":"layout","layoutId":"1f383551-3728-426a-be5e-ebaa7f19a77b","name":"Master","type":"master"}
+{"kind":"layout","layoutId":"42b7a1fd-9313-4c1e-89b3-4d16ec1c0df4","name":"Title Slide","type":"title"}
+{"kind":"slide","id":"sl/y2rz0f","slide":1,"title":"✦  BUILD DAY ENTRY","textShapes":9}
+{"kind":"shape","id":"sh/1cni1436","slide":1,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/e9cz6pkf","slide":1,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/fa50zul0","slide":1,"text":"COVER","textPreview":"COVER","textChars":5,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/ozehcz2h","slide":1,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/p0ni5432","slide":1,"text":"LONG-HORIZON AGENTS BUILD DAY","textPreview":"LONG-HORIZON AGENTS BUILD DAY","textChars":29,"textLines":1,"bbox":[64,96,500,24]}
+{"kind":"textbox","id":"sh/2xwzapkr","slide":1,"name":"project-name","text":"PROJECT NAME","textPreview":"PROJECT NAME","textChars":12,"textLines":1,"bbox":[64,135,1020,118]}
+{"kind":"textbox","id":"sh/3y503ulc","slide":1,"name":"one-line-value-proposition","text":"One sentence that makes the product impossible to misunderstand.","textPreview":"One sentence that makes the product impossible to misunderstand.","textChars":64,"textLines":1,"bbox":[68,267,850,66]}
+{"kind":"textbox","id":"sh/c3y1gj2t","slide":1,"text":"TEAM NAME  ·  AUG 22, 2026","textPreview":"TEAM NAME  ·  AUG 22, 2026","textChars":26,"textLines":1,"bbox":[68,354,500,24]}
+{"kind":"shape","id":"sh/x8f2143q","slide":1,"name":"hero-caption-band","bbox":[0,672,1280,48]}
+{"kind":"textbox","id":"sh/w7618z25","slide":1,"text":"HACKATHON ENTRY TEMPLATE","textPreview":"HACKATHON ENTRY TEMPLATE","textChars":24,"textLines":1,"bbox":[32,686,360,18]}
+{"kind":"textbox","id":"sh/v6xkzulk","slide":1,"text":"REPLACE EVERY PLACEHOLDER BEFORE PRESENTING","textPreview":"REPLACE EVERY PLACEHOLDER BEFORE PRESENTING","textChars":43,"textLines":1,"bbox":[780,686,460,18]}
+{"kind":"image","id":"im/s7up0ru1","slide":1,"name":"","alt":"A pale ribbon crossing a dry lake bed toward two metal frames","bbox":[0,398,1280,322]}
+{"kind":"notes","id":"nt/y2rz0f","slide":1,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n- OpenAI ImageGen (generated editorial hero image)\n[/Sources]"}
+{"kind":"slide","id":"sl/d4wwrn","slide":2,"title":"✦  BUILD DAY ENTRY","textShapes":11}
+{"kind":"shape","id":"sh/gnalgvix","slide":2,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/vm147q1c","slide":2,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/uls3el0r","slide":2,"text":"PROBLEM","textPreview":"PROBLEM","textChars":7,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/5s3md0je","slide":2,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/4ra5kvit","slide":2,"text":"CONTENTS","textPreview":"CONTENTS","textChars":8,"textLines":1,"bbox":[64,100,170,20]}
+{"kind":"textbox","id":"sh/3q14ba18","slide":2,"text":"Problem\nWho feels it\nWhy it persists\nWhat it costs","textPreview":"Problem | Who feels it | Why it persists | What it costs","textChars":50,"textLines":4,"bbox":[64,145,150,170]}
+{"kind":"shape","id":"sh/ips3i50n","slide":2,"name":"editorial-rule","bbox":[238,108,1,510]}
+{"kind":"textbox","id":"sh/lwzm1gja","slide":2,"text":"01 / PROBLEM","textPreview":"01 / PROBLEM","textChars":12,"textLines":1,"bbox":[285,98,500,24]}
+{"kind":"textbox","id":"sh/kvql8b2p","slide":2,"name":"problem-title","text":"The problem is visible.\nThe cost is compounding.","textPreview":"The problem is visible. | The cost is compounding.","textChars":48,"textLines":2,"bbox":[285,140,900,142]}
+{"kind":"textbox","id":"sh/u9cbilcn","slide":2,"text":"Describe the user, the moment the workflow breaks, and why existing solutions still leave the hard part unresolved.","textPreview":"Describe the user, the moment the workflow breaks, and why existing solutions still leave the hard part unresolved.","textChars":115,"textLines":1,"bbox":[285,312,780,92]}
+{"kind":"textbox","id":"sh/fa5crqd8","slide":2,"name":"primary-problem-metric","text":"XX%","textPreview":"XX%","textChars":3,"textLines":1,"bbox":[285,452,260,96]}
+{"kind":"textbox","id":"sh/gbetkvut","slide":2,"text":"PRIMARY COST OR FAILURE RATE\nAdd the source and sample size in one line.","textPreview":"PRIMARY COST OR FAILURE RATE | Add the source and sample size in one line.","textChars":72,"textLines":2,"bbox":[570,466,560,70]}
+{"kind":"shape","id":"sh/hcnut0vy","slide":2,"name":"accent-rule","bbox":[285,580,855,2]}
+{"kind":"textbox","id":"sh/2dwbm5cj","slide":2,"text":"The audience should feel the problem before they hear the feature list.","textPreview":"The audience should feel the problem before they hear the feature list.","textChars":71,"textLines":1,"bbox":[285,595,850,30]}
+{"kind":"notes","id":"nt/d4wwrn","slide":2,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}
+{"kind":"slide","id":"sl/gdg2bq","slide":3,"title":"✦  BUILD DAY ENTRY","textShapes":7}
+{"kind":"shape","id":"sh/vqhgbixo","slide":3,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/wrqhkny9","slide":3,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/xszydsfu","slide":3,"text":"INSIGHT","textPreview":"INSIGHT","textChars":7,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/m1ofedg7","slide":3,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/n2xg7yhs","slide":3,"text":"02 / THE INSIGHT","textPreview":"02 / THE INSIGHT","textChars":16,"textLines":1,"bbox":[64,92,500,24]}
+{"kind":"textbox","id":"sh/8n6xg3yd","slide":3,"name":"core-insight","text":"“The non-obvious thing\nwe learned goes here.”","textPreview":"“The non-obvious thing | we learned goes here.”","textChars":45,"textLines":2,"bbox":[110,185,1060,180]}
+{"kind":"shape","id":"sh/9ofy98fy","slide":3,"name":"accent-rule","bbox":[430,420,420,2]}
+{"kind":"textbox","id":"sh/yx4fatgb","slide":3,"text":"Explain why this insight changes the design of the product—not merely how you describe it.","textPreview":"Explain why this insight changes the design of the product—not merely how you describe it.","textChars":90,"textLines":1,"bbox":[270,462,740,70]}
+{"kind":"textbox","id":"sh/zydg3yhw","slide":3,"text":"EVIDENCE / OBSERVATION / USER QUOTE","textPreview":"EVIDENCE / OBSERVATION / USER QUOTE","textChars":35,"textLines":1,"bbox":[410,590,460,22]}
+{"kind":"notes","id":"nt/gdg2bq","slide":3,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}
+{"kind":"slide","id":"sl/58rci3","slide":4,"title":"✦  BUILD DAY ENTRY","textShapes":16}
+{"kind":"shape","id":"sh/gvyxwnud","slide":4,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/fupgn2ds","slide":4,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/utwfuxc7","slide":4,"text":"SOLUTION","textPreview":"SOLUTION","textChars":8,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/p07ytcvu","slide":4,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/4zyx07u9","slide":4,"text":"03 / SOLUTION","textPreview":"03 / SOLUTION","textChars":13,"textLines":1,"bbox":[64,96,500,24]}
+{"kind":"textbox","id":"sh/3ypgr2do","slide":4,"name":"solution-title","text":"A focused system that closes the loop.","textPreview":"A focused system that closes the loop.","textChars":38,"textLines":1,"bbox":[64,140,980,72]}
+{"kind":"textbox","id":"sh/2xgfyxc3","slide":4,"text":"Replace these three verbs with the core behavior of your product.","textPreview":"Replace these three verbs with the core behavior of your product.","textChars":65,"textLines":1,"bbox":[66,226,700,38]}
+{"kind":"shape","id":"sh/d4ryxcvq","slide":4,"name":"process-line","bbox":[130,386,850,2]}
+{"kind":"shape","id":"sh/c3ih4rul","slide":4,"bbox":[70,350,72,72]}
+{"kind":"textbox","id":"sh/qhcvelsn","slide":4,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[70,371,72,26]}
+{"kind":"textbox","id":"sh/bilwnq98","slide":4,"text":"OBSERVE","textPreview":"OBSERVE","textChars":7,"textLines":1,"bbox":[68,452,260,36]}
+{"kind":"textbox","id":"sh/cjedgvat","slide":4,"text":"What signal enters the system?","textPreview":"What signal enters the system?","textChars":30,"textLines":1,"bbox":[68,500,285,70]}
+{"kind":"shape","id":"sh/dknep0re","slide":4,"bbox":[440,350,72,72]}
+{"kind":"textbox","id":"sh/ylwvi5sz","slide":4,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[440,371,72,26]}
+{"kind":"textbox","id":"sh/zm5wra9k","slide":4,"text":"DECIDE","textPreview":"DECIDE","textChars":6,"textLines":1,"bbox":[438,452,260,36]}
+{"kind":"textbox","id":"sh/0nedkfa5","slide":4,"text":"What reasoning or model changes the outcome?","textPreview":"What reasoning or model changes the outcome?","textChars":44,"textLines":1,"bbox":[438,500,285,70]}
+{"kind":"shape","id":"sh/lonet0rq","slide":4,"bbox":[810,350,72,72]}
+{"kind":"textbox","id":"sh/epsv61sv","slide":4,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[810,371,72,26]}
+{"kind":"textbox","id":"sh/fq1cf690","slide":4,"text":"VERIFY","textPreview":"VERIFY","textChars":6,"textLines":1,"bbox":[808,452,260,36]}
+{"kind":"textbox","id":"sh/juhsn2ps","slide":4,"text":"How does the system know it worked?","textPreview":"How does the system know it worked?","textChars":35,"textLines":1,"bbox":[808,500,285,70]}
+{"kind":"textbox","id":"sh/it8rex8n","slide":4,"text":"ONE LINE ON THE DELIGHTFUL DIFFERENCE","textPreview":"ONE LINE ON THE DELIGHTFUL DIFFERENCE","textChars":37,"textLines":1,"bbox":[70,642,880,22]}
+{"kind":"notes","id":"nt/58rci3","slide":4,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}
+{"kind":"slide","id":"sl/fxdgyl","slide":5,"title":"✦  BUILD DAY ENTRY","textShapes":9}
+{"kind":"shape","id":"sh/k36hsvq9","slide":5,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/z2x0jq9o","slide":5,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/y1ozql83","slide":5,"text":"DEMO","textPreview":"DEMO","textChars":4,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/9szip0rq","slide":5,"text":"05","textPreview":"05","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/8rq1wfql","slide":5,"text":"04 / PRODUCT DEMO","textPreview":"04 / PRODUCT DEMO","textChars":17,"textLines":1,"bbox":[64,92,500,24]}
+{"kind":"textbox","id":"sh/7qh0na90","slide":5,"name":"demo-title","text":"Show the product doing the hard part.","textPreview":"Show the product doing the hard part.","textChars":37,"textLines":1,"bbox":[64,132,930,62]}
+{"kind":"shape","id":"sh/m58ju58f","slide":5,"name":"product-demo-placeholder","bbox":[64,220,1152,386]}
+{"kind":"textbox","id":"sh/hwjitkr2","slide":5,"text":"DROP PRODUCT DEMO\nOR SCREENSHOT HERE","textPreview":"DROP PRODUCT DEMO | OR SCREENSHOT HERE","textChars":36,"textLines":2,"bbox":[340,346,600,92]}
+{"kind":"textbox","id":"sh/wvq10fqh","slide":5,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[84,242,50,20]}
+{"kind":"textbox","id":"sh/m9c36lcn","slide":5,"text":"Caption the moment judges should notice. Keep it specific.","textPreview":"Caption the moment judges should notice. Keep it specific.","textChars":58,"textLines":1,"bbox":[64,628,840,28]}
+{"kind":"textbox","id":"sh/7al4fqt8","slide":5,"text":"LIVE DEMO →","textPreview":"LIVE DEMO →","textChars":11,"textLines":1,"bbox":[1020,628,196,24]}
+{"kind":"notes","id":"nt/fxdgyl","slide":5,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}
+{"kind":"slide","id":"sl/4jhkak","slide":6,"title":"✦  BUILD DAY ENTRY","textShapes":20}
+{"kind":"shape","id":"sh/rmho3q9s","slide":6,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/snq5wvqd","slide":6,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/t8j65gry","slide":6,"text":"ARCHITECTURE","textPreview":"ARCHITECTURE","textChars":12,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/ih8nq18b","slide":6,"text":"06","textPreview":"06","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/jihoz69g","slide":6,"text":"05 / SYSTEM","textPreview":"05 / SYSTEM","textChars":11,"textLines":1,"bbox":[64,92,500,24]}
+{"kind":"textbox","id":"sh/4jq5sbq1","slide":6,"name":"architecture-title","text":"The architecture protects\nthe product promise.","textPreview":"The architecture protects | the product promise.","textChars":46,"textLines":2,"bbox":[64,136,560,116]}
+{"kind":"textbox","id":"sh/5kz61grm","slide":6,"text":"Name the one technical choice that makes the demo credible: persistence, verification, latency, data access, or safety.","textPreview":"Name the one technical choice that makes the demo credible: persistence, verification, latency, data access, or safety.","textChars":119,"textLines":1,"bbox":[66,280,460,118]}
+{"kind":"textbox","id":"sh/2ds7258f","slide":6,"text":"TECHNICAL EDGE","textPreview":"TECHNICAL EDGE","textChars":14,"textLines":1,"bbox":[66,455,180,20]}
+{"kind":"textbox","id":"sh/3e1oba90","slide":6,"text":"One concise sentence on what is genuinely hard to reproduce.","textPreview":"One concise sentence on what is genuinely hard to reproduce.","textChars":60,"textLines":1,"bbox":[66,488,430,72]}
+{"kind":"shape","id":"sh/3a5o36d0","slide":6,"name":"connector-1","bbox":[724,211,2,42]}
+{"kind":"shape","id":"sh/29w7ulwf","slide":6,"bbox":[690,149,70,70]}
+{"kind":"textbox","id":"sh/pcn65gv6","slide":6,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[690,172,70,22]}
+{"kind":"textbox","id":"sh/obepwbel","slide":6,"text":"INPUT","textPreview":"INPUT","textChars":5,"textLines":1,"bbox":[790,143,350,28]}
+{"kind":"textbox","id":"sh/be5o7qdc","slide":6,"text":"Trigger, context, or user intent","textPreview":"Trigger, context, or user intent","textChars":32,"textLines":1,"bbox":[790,179,350,38]}
+{"kind":"shape","id":"sh/adw7ylwr","slide":6,"name":"rule-1","bbox":[790,225,350,1]}
+{"kind":"shape","id":"sh/xg7q90v2","slide":6,"name":"connector-2","bbox":[724,339,2,42]}
+{"kind":"shape","id":"sh/cfep0veh","slide":6,"bbox":[690,277,70,70]}
+{"kind":"textbox","id":"sh/z2p8bqd8","slide":6,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[690,300,70,22]}
+{"kind":"textbox","id":"sh/y1g725wn","slide":6,"text":"AGENT LOOP","textPreview":"AGENT LOOP","textChars":10,"textLines":1,"bbox":[790,271,350,28]}
+{"kind":"textbox","id":"sh/ux0ru9gv","slide":6,"text":"Plan → tool use → checkpoint","textPreview":"Plan → tool use → checkpoint","textChars":28,"textLines":1,"bbox":[790,307,350,38]}
+{"kind":"shape","id":"sh/vy9s3uxg","slide":6,"name":"rule-2","bbox":[790,353,350,1]}
+{"kind":"shape","id":"sh/wz29wzy1","slide":6,"name":"connector-3","bbox":[724,467,2,42]}
+{"kind":"shape","id":"sh/h0ba54fm","slide":6,"bbox":[690,405,70,70]}
+{"kind":"textbox","id":"sh/m90rqpgz","slide":6,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[690,428,70,22]}
+{"kind":"textbox","id":"sh/7a9szuxk","slide":6,"text":"VERIFIER","textPreview":"VERIFIER","textChars":8,"textLines":1,"bbox":[790,399,350,28]}
+{"kind":"textbox","id":"sh/8vi9szyp","slide":6,"text":"Environment state or metric","textPreview":"Environment state or metric","textChars":27,"textLines":1,"bbox":[790,435,350,38]}
+{"kind":"shape","id":"sh/9wra14fa","slide":6,"name":"rule-3","bbox":[790,481,350,1]}
+{"kind":"shape","id":"sh/65kb2tw3","slide":6,"bbox":[690,533,70,70]}
+{"kind":"textbox","id":"sh/rqdsbexo","slide":6,"text":"04","textPreview":"04","textChars":2,"textLines":1,"bbox":[690,556,70,22]}
+{"kind":"textbox","id":"sh/1wzmhc32","slide":6,"text":"OUTCOME","textPreview":"OUTCOME","textChars":7,"textLines":1,"bbox":[790,527,350,28]}
+{"kind":"textbox","id":"sh/0b6lo7mh","slide":6,"text":"Action the user can trust","textPreview":"Action the user can trust","textChars":25,"textLines":1,"bbox":[790,563,350,38]}
+{"kind":"shape","id":"sh/fax4f2lw","slide":6,"name":"rule-4","bbox":[790,609,350,1]}
+{"kind":"notes","id":"nt/4jhkak","slide":6,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}
+{"kind":"slide","id":"sl/k4fl6f","slide":7,"title":"✦  BUILD DAY ENTRY","textShapes":18}
+{"kind":"shape","id":"sh/xszehgnu","slide":7,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/ap8v61o3","slide":7,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/bqhwf65o","slide":7,"text":"EVIDENCE","textPreview":"EVIDENCE","textChars":8,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/kvadcb6l","slide":7,"text":"07","textPreview":"07","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/lwjelgn6","slide":7,"text":"06 / MEASUREMENT","textPreview":"06 / MEASUREMENT","textChars":16,"textLines":1,"bbox":[64,92,500,24]}
+{"kind":"textbox","id":"sh/yt8valof","slide":7,"name":"evidence-title","text":"A credible win in one honest measurement.","textPreview":"A credible win in one honest measurement.","textChars":41,"textLines":1,"bbox":[64,135,1000,68]}
+{"kind":"textbox","id":"sh/ju1wjq50","slide":7,"text":"PRIMARY METRIC","textPreview":"PRIMARY METRIC","textChars":14,"textLines":1,"bbox":[66,260,240,22]}
+{"kind":"textbox","id":"sh/8jaxgvmh","slide":7,"name":"primary-success-metric","text":"XX%","textPreview":"XX%","textChars":3,"textLines":1,"bbox":[64,300,360,120]}
+{"kind":"textbox","id":"sh/tkjep0n2","slide":7,"text":"Describe what changed, compared with what baseline, over what sample.","textPreview":"Describe what changed, compared with what baseline, over what sample.","textChars":69,"textLines":1,"bbox":[66,438,420,92]}
+{"kind":"shape","id":"sh/h4zuhszq","slide":7,"name":"metric-divider","bbox":[540,252,1,330]}
+{"kind":"textbox","id":"sh/w3qd8ni5","slide":7,"text":"XX×","textPreview":"XX×","textChars":3,"textLines":1,"bbox":[610,250,190,54]}
+{"kind":"textbox","id":"sh/v2hcfihk","slide":7,"text":"FASTER","textPreview":"FASTER","textChars":6,"textLines":1,"bbox":[820,254,190,22]}
+{"kind":"textbox","id":"sh/uhov6d0f","slide":7,"text":"Time-to-result versus baseline","textPreview":"Time-to-result versus baseline","textChars":30,"textLines":1,"bbox":[820,284,350,35]}
+{"kind":"shape","id":"sh/58zelsz2","slide":7,"name":"metric-rule-1","bbox":[610,340,540,1]}
+{"kind":"textbox","id":"sh/47qdcnih","slide":7,"text":"XX","textPreview":"XX","textChars":2,"textLines":1,"bbox":[610,362,190,54]}
+{"kind":"textbox","id":"sh/j6hwjihw","slide":7,"text":"RUNS","textPreview":"RUNS","textChars":4,"textLines":1,"bbox":[820,366,190,22]}
+{"kind":"textbox","id":"sh/i58vax0b","slide":7,"text":"State the sample size","textPreview":"State the sample size","textChars":21,"textLines":1,"bbox":[820,396,350,35]}
+{"kind":"shape","id":"sh/lcfu98zi","slide":7,"name":"metric-rule-2","bbox":[610,452,540,1]}
+{"kind":"textbox","id":"sh/kb6d03ix","slide":7,"text":"XX%","textPreview":"XX%","textChars":3,"textLines":1,"bbox":[610,474,190,54]}
+{"kind":"textbox","id":"sh/cvadg3qt","slide":7,"text":"SUCCESS","textPreview":"SUCCESS","textChars":7,"textLines":1,"bbox":[820,478,190,22]}
+{"kind":"textbox","id":"sh/dwjep87e","slide":7,"text":"Define success precisely","textPreview":"Define success precisely","textChars":24,"textLines":1,"bbox":[820,508,350,35]}
+{"kind":"textbox","id":"sh/qt8vet83","slide":7,"text":"REPLACE ALL SAMPLE VALUES · CITE THE SOURCE","textPreview":"REPLACE ALL SAMPLE VALUES · CITE THE SOURCE","textChars":43,"textLines":1,"bbox":[610,590,540,22]}
+{"kind":"notes","id":"nt/k4fl6f","slide":7,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}
+{"kind":"slide","id":"sl/cw87yh","slide":8,"title":"✦  BUILD DAY ENTRY","textShapes":14}
+{"kind":"shape","id":"sh/w7uhgjyp","slide":8,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/b6lgneh4","slide":8,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/a5sze9gj","slide":8,"text":"WHY NOW","textPreview":"WHY NOW","textChars":7,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/pkjyl4ze","slide":8,"text":"08","textPreview":"08","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/ojahczyt","slide":8,"text":"07 / WHY THIS WINS","textPreview":"07 / WHY THIS WINS","textChars":18,"textLines":1,"bbox":[64,92,500,24]}
+{"kind":"textbox","id":"sh/ni1gjuh8","slide":8,"name":"why-now-title","text":"Why this idea matters now.","textPreview":"Why this idea matters now.","textChars":26,"textLines":1,"bbox":[64,136,780,68]}
+{"kind":"textbox","id":"sh/2hsza9gn","slide":8,"text":"01","textPreview":"01","textChars":2,"textLines":1,"bbox":[64,270,80,30]}
+{"kind":"textbox","id":"sh/1gjyh4z2","slide":8,"text":"A capability shift","textPreview":"A capability shift","textChars":18,"textLines":1,"bbox":[180,266,360,38]}
+{"kind":"textbox","id":"sh/0fah8zyh","slide":8,"text":"Name the model, platform, or behavior that only recently became possible.","textPreview":"Name the model, platform, or behavior that only recently became possible.","textChars":73,"textLines":1,"bbox":[570,270,590,54]}
+{"kind":"shape","id":"sh/q503e1sf","slide":8,"name":"reason-rule-1","bbox":[64,348,1096,1]}
+{"kind":"textbox","id":"sh/r694769k","slide":8,"text":"02","textPreview":"02","textChars":2,"textLines":1,"bbox":[64,390,80,30]}
+{"kind":"textbox","id":"sh/c7ilgba5","slide":8,"text":"A distribution advantage","textPreview":"A distribution advantage","textChars":24,"textLines":1,"bbox":[180,386,360,38]}
+{"kind":"textbox","id":"sh/d8bm9grq","slide":8,"text":"Explain how this reaches users faster than a technically similar product.","textPreview":"Explain how this reaches users faster than a technically similar product.","textChars":73,"textLines":1,"bbox":[570,390,590,54]}
+{"kind":"shape","id":"sh/2103a1s3","slide":8,"name":"reason-rule-2","bbox":[64,468,1096,1]}
+{"kind":"textbox","id":"sh/32943m9o","slide":8,"text":"03","textPreview":"03","textChars":2,"textLines":1,"bbox":[64,510,80,30]}
+{"kind":"textbox","id":"sh/43ilcra9","slide":8,"text":"A compounding moat","textPreview":"A compounding moat","textChars":18,"textLines":1,"bbox":[180,506,360,38]}
+{"kind":"textbox","id":"sh/p4rm5wru","slide":8,"text":"Identify the data, workflow, or feedback loop that improves with every use.","textPreview":"Identify the data, workflow, or feedback loop that improves with every use.","textChars":75,"textLines":1,"bbox":[570,510,590,54]}
+{"kind":"shape","id":"sh/udg36hs7","slide":8,"name":"reason-rule-3","bbox":[64,588,1096,1]}
+{"kind":"notes","id":"nt/cw87yh","slide":8,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}
+{"kind":"slide","id":"sl/88gaxh","slide":9,"title":"✦  BUILD DAY ENTRY","textShapes":15}
+{"kind":"shape","id":"sh/ads3utgr","slide":9,"name":"top-bar","bbox":[0,0,1280,58]}
+{"kind":"textbox","id":"sh/x03258zi","slide":9,"text":"✦  BUILD DAY ENTRY","textPreview":"✦  BUILD DAY ENTRY","textChars":18,"textLines":1,"bbox":[30,18,260,22]}
+{"kind":"textbox","id":"sh/wfulw3yx","slide":9,"text":"TEAM + NEXT STEP","textPreview":"TEAM + NEXT STEP","textChars":16,"textLines":1,"bbox":[820,18,330,22]}
+{"kind":"textbox","id":"sh/na1kzyhg","slide":9,"text":"09","textPreview":"09","textChars":2,"textLines":1,"bbox":[1180,18,70,22]}
+{"kind":"textbox","id":"sh/m9s3qtgv","slide":9,"text":"08 / CLOSE","textPreview":"08 / CLOSE","textChars":10,"textLines":1,"bbox":[64,96,500,24]}
+{"kind":"textbox","id":"sh/9cj21oz6","slide":9,"name":"closing-title","text":"The team can ship\nthe next version.","textPreview":"The team can ship | the next version.","textChars":35,"textLines":2,"bbox":[64,140,780,150]}
+{"kind":"textbox","id":"sh/obals3yl","slide":9,"text":"NAME / ROLE","textPreview":"NAME / ROLE","textChars":11,"textLines":1,"bbox":[68,350,300,28]}
+{"kind":"textbox","id":"sh/7654bihk","slide":9,"text":"One line of unusually relevant experience.","textPreview":"One line of unusually relevant experience.","textChars":42,"textLines":1,"bbox":[68,392,330,50]}
+{"kind":"textbox","id":"sh/65c32dgz","slide":9,"text":"NAME / ROLE","textPreview":"NAME / ROLE","textChars":11,"textLines":1,"bbox":[456,350,300,28]}
+{"kind":"textbox","id":"sh/8zelsvq1","slide":9,"text":"One line of unusually relevant experience.","textPreview":"One line of unusually relevant experience.","textChars":42,"textLines":1,"bbox":[456,392,330,50]}
+{"kind":"textbox","id":"sh/90n210rm","slide":9,"text":"NAME / ROLE","textPreview":"NAME / ROLE","textChars":11,"textLines":1,"bbox":[844,350,300,28]}
+{"kind":"textbox","id":"sh/mxc3ql8v","slide":9,"text":"One line of unusually relevant experience.","textPreview":"One line of unusually relevant experience.","textChars":42,"textLines":1,"bbox":[844,392,330,50]}
+{"kind":"shape","id":"sh/ny5kzq9g","slide":9,"name":"closing-rule","bbox":[64,494,1096,2]}
+{"kind":"textbox","id":"sh/0vulovq5","slide":9,"text":"WHAT WE NEED NEXT","textPreview":"WHAT WE NEED NEXT","textChars":17,"textLines":1,"bbox":[64,535,280,22]}
+{"kind":"textbox","id":"sh/lw32xgrq","slide":9,"text":"A pilot partner, a technical collaborator, or one concrete decision.","textPreview":"A pilot partner, a technical collaborator, or one concrete decision.","textChars":68,"textLines":1,"bbox":[64,572,770,60]}
+{"kind":"textbox","id":"sh/etc3ml8z","slide":9,"text":"DEMO URL / QR","textPreview":"DEMO URL / QR","textChars":13,"textLines":1,"bbox":[920,574,240,24]}
+{"kind":"textbox","id":"sh/zulkvq9k","slide":9,"text":"Make the final request easy to answer.","textPreview":"Make the final request easy to answer.","textChars":38,"textLines":1,"bbox":[920,610,240,34]}
+{"kind":"notes","id":"nt/88gaxh","slide":9,"text":"[Sources]\n- https://blog.agihouse.org/posts/long-horizon-agents-a-technical-primer (visual style reference)\n[/Sources]"}

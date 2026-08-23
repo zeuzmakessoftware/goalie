@@ -1,0 +1,5 @@
+User-provided presentation script, received 2026-08-22.
+Local product sources: README.md, docs/architecture.md, docs/demo.md.
+FIFA source for the 2022 Argentina loss-to-champion arc: https://www.fifa.com/es/articles/el-camino-de-argentina-hacia-el-titulo-de-la-copa-mundial
+FIFA source for the 2026 World Cup final context: https://www.fifa.com/en/tournaments/mens/worldcup/canadamexicousa2026/articles/spain-argentina-final-report-highlights
+Generated cover visual: OpenAI image generation, prompt recorded in conversation; no external asset URL.
