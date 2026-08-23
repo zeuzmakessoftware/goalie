@@ -1,5 +1,0 @@
-Slide 1: inherited hero image replaced with a generated soccer goal image to align the visual premise with the talk.
-Slides 1-9: inherited sample/template copy rewritten to the Goalie three-minute pitch while preserving typography and geometry.
-Slide 5: demo placeholder retained as an intentional prerecorded-demo cue; no fabricated product screenshot added.
-Slide 7: sample quantitative evidence reframed as explicit product gates and stop rules; no unsupported performance metric invented.
-Slide 9: the GitHub request is explicit, but the URL remains a presenter cue because no repository remote or confirmed public URL was available locally.

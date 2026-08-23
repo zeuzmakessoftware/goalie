@@ -1,8 +1,25 @@
 # Goalie CLI
 
+[![CI](https://github.com/zeuzmakessoftware/goalie/actions/workflows/ci.yml/badge.svg)](https://github.com/zeuzmakessoftware/goalie/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+
 > An evidence-driven, long-horizon coding gauntlet: manager, worker, critic, hard checks, durable state, and a terminal match broadcast.
 
 Goalie turns one coding goal into a confirmed quality contract, then runs an iterative build–verify–critic loop in isolated Git worktrees. A positive critic trajectory scores a terminal **GOAL**; a negative one triggers a **SAVE** and another attempt; an uncertain verdict goes to **VAR**. The animation is the broadcast layer. Deterministic checks and the final artifact remain the source of truth.
+
+## Judge it in two minutes
+
+The default evaluation path is deterministic, offline, and does not require provider credentials:
+
+```sh
+pnpm install --frozen-lockfile
+pnpm check
+pnpm dev demo --headless --speed 100
+```
+
+`pnpm check` runs type-checking, the complete test suite, a production build, and a packed-package smoke test. The final command verifies and summarizes the bundled Penalty Ledger replay without contacting a model provider; expect `SIMULATED FIXTURE — NO ACTIVE AGENTS`, two loops, two checkpoints, one save, and one goal.
+
+For the visual broadcast, run `pnpm dev demo --speed 5`. For the system design and the exact H1/H2/H3 claims, see the [architecture notes](docs/architecture.md). For a presenter-ready walkthrough, see the [demo script](docs/demo.md).
 
 Goalie is a v1 research prototype. It has a working H1 loop, an H2 durability substrate, and a conservative H3 playbook-promotion library. A run can consume explicitly selected, previously activated procedure guidance after verifying its content-addressed record and showing it at kickoff. Goalie does **not** autonomously draft, evaluate, review, select, or activate playbooks. It also does not provide a hardened OS sandbox or make a model verdict equivalent to proof. Read the [architecture](docs/architecture.md) and [threat model](docs/security.md) before using it on valuable repositories.
 

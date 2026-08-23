@@ -1,9 +1,0 @@
-Source deck: GOALIE_Figma_Compatible.pptx
-Slides: 9, 16:9, editorial hackathon-entry visual system.
-Reusable patterns: cover, problem, insight quote, three-step process, demo frame, architecture flow, measurement, why-now list, closing ask.
-Typography: preserve imported Calibri/Georgia sizes, line spacing, insets, alignment, and vertical anchors.
-Color system: warm off-white, black, white, and magenta accent.
-Brand/chrome: retain the black top rail, section labels, slide numbers, rules, and bottom bands.
-Media: replace the inherited cover image with one generated soccer-field hero in the same frame.
-Insertion contract: duplicate every source slide once, edit inherited objects in place, preserve all layout/master relationships, and add no narrative overlays.
-Placeholders: all visible template instructions and sample values are rewritten; no empty structural placeholders are permitted.
