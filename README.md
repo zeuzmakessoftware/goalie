@@ -80,7 +80,7 @@ pnpm dev demo --live --env-file .env --openrouter-only --openrouter-model deepse
 Grok coding alternative:
 
 ```sh
-pnpm dev demo --live --env-file .env --openrouter-only --openrouter-model x-ai/grok-code-fast-1
+pnpm dev demo --live --env-file .env --openrouter-only --openrouter-model x-ai/grok-build-0.1
 ```
 
 Replace the model slug with any current tool-capable OpenRouter model. `--openrouter-only` is deliberately disclosed at kickoff as `DEGRADED INDEPENDENCE`: fresh critic sessions are still used, but they share the builder's provider/model family.

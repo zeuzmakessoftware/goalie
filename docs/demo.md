@@ -42,7 +42,7 @@ For a single-model OpenRouter demonstration using a current coding-capable model
 pnpm dev demo --live --env-file .env --openrouter-only --openrouter-model deepseek/deepseek-v4-flash
 ```
 
-For Grok Code Fast 1, substitute `--openrouter-model x-ai/grok-code-fast-1`. This mode routes manager, builder, critic, and integrator through OpenRouter, disables cross-family fallback, and explicitly records the same-provider critic waiver as `DEGRADED INDEPENDENCE` at kickoff.
+For Grok Build 0.1, substitute `--openrouter-model x-ai/grok-build-0.1`. This mode routes manager, builder, critic, and integrator through OpenRouter, disables cross-family fallback, and explicitly records the same-provider critic waiver as `DEGRADED INDEPENDENCE` at kickoff.
 
 This invokes configured providers, so latency, usage, cost, patches, and verdicts are real and variable. Review the kickoff, provider availability, and exact check command first. Never describe a rehearsal capture as live.
 
