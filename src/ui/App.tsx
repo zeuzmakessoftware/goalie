@@ -10,6 +10,7 @@ import {
 } from './animation.js';
 import type { AnimationEvent, AnimationQueueState } from './animation.js';
 import {
+  AgentMatchup,
   AgentTabs,
   BroadcastBody,
   HelpPane,
@@ -300,6 +301,7 @@ export function App({
   return (
     <Box flexDirection="column" width={size.columns}>
       <Scoreboard session={session} preferences={preferences} layout={layout} />
+      <AgentMatchup session={session} preferences={preferences} layout={layout} />
       <AgentTabs
         agents={session.agents}
         selectedAgentId={ui.selectedAgentId}

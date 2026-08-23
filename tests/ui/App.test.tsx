@@ -65,7 +65,10 @@ test('renders the broadcast dashboard without a real terminal', () => {
   const frame = screen.lastFrame() ?? '';
   expect(frame).toContain('GOALIE // Long Horizon Cup');
   expect(frame).toContain('GOALS 4 : 2 SAVES');
-  expect(frame).toContain('[1] ● CAPTAIN');
+  expect(frame).toContain('OFFENSE // ● CAPTAIN');
+  expect(frame).toContain('DEFENSE // ◌ HARD PRESS');
+  expect(frame).toContain('HANDOFF');
+  expect(frame).toContain('[1] ● OFF CAPTAIN');
   expect(frame).toContain('LIVE FEED // TOUCHLINE');
   expect(frame).toContain('TACTICAL BOARD // FORMATION');
   expect(frame).toContain('EVIDENCE LOCKER // RECEIPTS');
@@ -86,7 +89,9 @@ test('minimal layout remains usable and exposes persistent controls', () => {
   cleanup.push(screen.unmount);
 
   const frame = screen.lastFrame() ?? '';
-  expect(frame).toContain('[1] * CAPTAIN');
+  expect(frame).toContain('OFFENSE // * CAPTAIN');
+  expect(frame).toContain('DEFENSE // . HARD PRESS');
+  expect(frame).toContain('[1] * OFF CAPTAIN');
   expect(frame).toContain('[T] FEED');
   expect(frame).toContain('SPECTATOR MODE');
 });
@@ -117,6 +122,37 @@ test('final verdict enters an accessible reduced-motion replay', async () => {
   expect(frame).toContain('REPLAY // REDUCED MOTION // GOAL');
   expect(frame).toContain('GOAL — critic approves');
   expect(frame).toContain('All required checks cleared.');
+  expect(frame).toContain('APPROVED');
+});
+
+test('the offense and defense matchup stays visible when a detail tab changes', async () => {
+  const screen = render(
+    <App
+      session={{
+        ...session,
+        latestVerdict: {
+          id: 'verdict-score',
+          direction: 'negative',
+          overall: 'fail',
+          status: 'final',
+          score: 72,
+          summary: 'Concurrency evidence is still incomplete.',
+        },
+      }}
+      terminalSize={{ columns: 100, rows: 28 }}
+      colorMode="none"
+      motionMode="none"
+    />,
+  );
+  cleanup.push(screen.unmount);
+
+  screen.stdin.write('2');
+  await new Promise(resolve => setTimeout(resolve, 10));
+  const frame = screen.lastFrame() ?? '';
+  expect(frame).toContain('OFFENSE // * CAPTAIN');
+  expect(frame).toContain('DEFENSE // . HARD PRESS');
+  expect(frame).toContain('REVISION 72/100');
+  expect(frame).toContain('Concurrency evidence is still incomp');
 });
 
 test('no-motion mode renders a text-only verdict without ASCII frames', async () => {

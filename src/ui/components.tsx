@@ -124,6 +124,147 @@ function ratio(current: number, limit: number | undefined): string {
   return limit === undefined ? String(current) : `${current}/${limit}`;
 }
 
+function isDefenseAgent(agent: AgentSnapshot): boolean {
+  return /critic|auditor|review|defen|var/i.test(
+    `${agent.role} ${agent.id} ${agent.name}`,
+  );
+}
+
+function agentPriority(agent: AgentSnapshot): number {
+  const statusPriority: Record<AgentSnapshot['status'], number> = {
+    working: 6,
+    waiting: 5,
+    blocked: 4,
+    failed: 3,
+    done: 2,
+    idle: 1,
+  };
+  return statusPriority[agent.status];
+}
+
+function representativeAgent(
+  agents: readonly AgentSnapshot[],
+  side: 'offense' | 'defense',
+): AgentSnapshot | undefined {
+  const candidates = agents.filter(agent =>
+    side === 'defense'
+      ? isDefenseAgent(agent)
+      : !isDefenseAgent(agent) && agent.role !== 'system',
+  );
+  const sideAffinity = (agent: AgentSnapshot) => {
+    if (side === 'defense') return /critic|var/i.test(`${agent.role} ${agent.name}`) ? 3 : 1;
+    return agent.role === 'worker' ? 3 : 1;
+  };
+  return [...candidates].sort(
+    (left, right) =>
+      agentPriority(right) * 10 + sideAffinity(right) -
+      (agentPriority(left) * 10 + sideAffinity(left)),
+  )[0];
+}
+
+function reviewScore(score: number | undefined): string {
+  if (score === undefined || !Number.isFinite(score)) return 'PENDING';
+  const normalized = Math.abs(score) <= 1 ? Math.abs(score) * 100 : Math.abs(score);
+  return `${Math.min(100, Math.round(normalized))}/100`;
+}
+
+function sideLabel(
+  side: 'offense' | 'defense',
+  agent: AgentSnapshot | undefined,
+  preferences: DisplayPreferences,
+): ReactNode {
+  const color: Accent = side === 'offense' ? 'cyan' : 'yellow';
+  return (
+    <Text>
+      <Text bold {...textColor(preferences, color)}>{side.toUpperCase()}</Text>
+      <Text {...textColor(preferences, 'gray')}> // </Text>
+      {agent ? (
+        <Text bold {...textColor(preferences, statusColor(agent.status))}>
+          {statusGlyph(agent.status, preferences.asciiOnly)} {clipText(agent.name.toUpperCase(), 18)}
+        </Text>
+      ) : (
+        <Text {...textColor(preferences, 'gray')}>WAITING FOR LINEUP</Text>
+      )}
+    </Text>
+  );
+}
+
+/** Keeps the core offense/defense loop visible while a detailed agent tab is selected. */
+export function AgentMatchup({
+  session,
+  preferences,
+  layout,
+}: {
+  session: BroadcastSession;
+  preferences: DisplayPreferences;
+  layout: LayoutMode;
+}) {
+  const offense = representativeAgent(session.agents, 'offense');
+  const defense = representativeAgent(session.agents, 'defense');
+  const verdict = session.latestVerdict ?? session.verdicts?.at(-1);
+  const verdictLabel = verdict?.status === 'streaming'
+    ? 'REVIEWING'
+    : verdict?.overall === 'pass' || verdict?.direction === 'positive'
+      ? 'APPROVED'
+      : verdict?.overall === 'fail' || verdict?.direction === 'negative'
+        ? 'REVISION'
+        : 'PENDING';
+  const arrow = preferences.asciiOnly ? '>>' : '▶';
+
+  if (layout === 'minimal' || layout === 'compact') {
+    return (
+      <Box justifyContent="space-between">
+        <Text>
+          {sideLabel('offense', offense, preferences)}{' '}
+          <Text bold {...textColor(preferences, 'green')}>{arrow}</Text>{' '}
+          {sideLabel('defense', defense, preferences)}
+        </Text>
+        {layout === 'compact' ? (
+          <Text bold {...textColor(preferences, verdictLabel === 'APPROVED' ? 'green' : 'yellow')}>
+            {verdictLabel} {reviewScore(verdict?.score)}
+          </Text>
+        ) : null}
+      </Box>
+    );
+  }
+
+  const offenseTask = singleLine(offense?.currentTask ?? 'Preparing the best attempt', 50);
+  const defenseTask = singleLine(
+    defense?.currentTask ?? verdict?.summary ?? 'Scrutinizing evidence and output',
+    50,
+  );
+
+  return (
+    <Box
+      borderStyle={preferences.asciiOnly ? 'classic' : 'single'}
+      {...borderColor(preferences, 'cyan')}
+      paddingX={1}
+    >
+      <Box width="45%" flexDirection="column">
+        {sideLabel('offense', offense, preferences)}
+        <Text wrap="truncate-end">
+          <Text {...textColor(preferences, 'gray')}>ATTACK </Text>{offenseTask}
+        </Text>
+      </Box>
+      <Box width="10%" alignItems="center" justifyContent="center" flexDirection="column">
+        <Text bold {...textColor(preferences, 'green')}>{arrow}</Text>
+        <Text {...textColor(preferences, 'gray')}>HANDOFF</Text>
+      </Box>
+      <Box width="45%" flexDirection="column">
+        <Box justifyContent="space-between">
+          {sideLabel('defense', defense, preferences)}
+          <Text bold {...textColor(preferences, verdictLabel === 'APPROVED' ? 'green' : 'yellow')}>
+            {verdictLabel} {reviewScore(verdict?.score)}
+          </Text>
+        </Box>
+        <Text wrap="truncate-end">
+          <Text {...textColor(preferences, 'gray')}>REVIEW </Text>{defenseTask}
+        </Text>
+      </Box>
+    </Box>
+  );
+}
+
 export interface PanelProps {
   title: string;
   preferences: DisplayPreferences;
@@ -257,7 +398,8 @@ export function AgentTabs({
               {...textColor(preferences, selected ? 'cyan' : statusColor(agent.status))}
             >
               {selected ? '>' : ' '}[{shortcut}] {statusGlyph(agent.status, preferences.asciiOnly)}{' '}
-              {clipText(agent.name.toUpperCase(), 11)}
+              {isDefenseAgent(agent) ? 'DEF' : agent.role === 'system' ? 'SYS' : 'OFF'}{' '}
+              {clipText(agent.name.toUpperCase(), 8)}
             </Text>
           </Box>
         );
@@ -665,7 +807,8 @@ export function BroadcastBody({
   preferences: DisplayPreferences;
   replay: { event: AnimationEvent; frame: number } | null;
 }) {
-  const bodyRows = Math.max(7, size.rows - (layout === 'minimal' ? 6 : 10));
+  const matchupRows = layout === 'minimal' || layout === 'compact' ? 1 : 4;
+  const bodyRows = Math.max(7, size.rows - (layout === 'minimal' ? 6 : 10) - matchupRows);
   const transcriptWidth = Math.max(28, Math.floor(size.columns * 0.6));
 
   if (replay && (layout === 'compact' || layout === 'minimal')) {
