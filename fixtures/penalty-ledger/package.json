@@ -1,0 +1,9 @@
+{
+  "name": "goalie-penalty-ledger-fixture",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "test": "node --test tests/*.test.ts",
+    "verify": "node --test tests/*.test.ts verifiers/*.test.ts"
+  }
+}
