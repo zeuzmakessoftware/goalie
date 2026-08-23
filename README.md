@@ -138,10 +138,10 @@ Goalie calls the selected kickoff manager read-only, then prints the resolved go
 Important flags:
 
 - global/provider setup: `--env-file FILE` explicitly loads a trusted dotenv file; it is never implicit
-- `run`: `--prompt-file FILE`, `--yes`, `--headless`, `--manager`, `--builder`, `--critic`, `--max-minutes`, `--max-turns`, `--max-cost`, `--concurrency`, `--no-motion`
-- `resume`: `--headless`, `--max-minutes`, `--max-turns`, `--max-cost`, `--no-motion` (provider and concurrency overrides are refused)
-- `replay`: `--speed N`, `--headless`
-- `demo`: `--live`, `--crash-after-checkpoint` (live only), `--headless`, `--yes`
+- `run`: `--prompt-file FILE`, `--yes`, `--headless`, `--manager`, `--builder`, `--critic`, `--max-minutes`, `--max-turns`, `--max-cost`, `--concurrency`, `--no-motion`, `--follow-agent-output`
+- `resume`: `--headless`, `--max-minutes`, `--max-turns`, `--max-cost`, `--no-motion`, `--follow-agent-output` (provider and concurrency overrides are refused)
+- `replay`: `--speed N`, `--headless`, `--follow-agent-output`
+- `demo`: `--live`, `--crash-after-checkpoint` (live only), `--headless`, `--yes`, `--follow-agent-output`
 - `export`: `--output FILE`
 
 See [operations](docs/operations.md) for configuration precedence, storage, statuses, budget semantics, and command details.
@@ -161,7 +161,7 @@ See [operations](docs/operations.md) for configuration precedence, storage, stat
 | `Q` twice within four seconds | Confirm a checkpointed live-session stop; one `Q` only arms the prompt. |
 | `Ctrl+C` | Immediately request graceful checkpoint/cancellation, including while composing. |
 
-The layout adapts from wide broadcast to a minimal scoreboard. `--no-motion` and `GOALIE_NO_ANIMATION=1` use text-only verdict labels; `GOALIE_REDUCED_MOTION=1` holds one static final frame. `NO_COLOR` and `GOALIE_ASCII=1` support no-color and ASCII-only terminals. Navigation works during interactive live sessions and replay/demo playback; `--headless` emits a non-interactive transcript.
+The layout adapts from wide broadcast to a minimal scoreboard. `--no-motion` and `GOALIE_NO_ANIMATION=1` use text-only verdict labels; `GOALIE_REDUCED_MOTION=1` holds one static final frame. `--follow-agent-output` switches to the agent tab that produced the newest transcript line, pausing while Help or prompt composition is open. `NO_COLOR` and `GOALIE_ASCII=1` support no-color and ASCII-only terminals. Navigation works during interactive live sessions and replay/demo playback; `--headless` emits a non-interactive transcript.
 
 ## Evidence, durability, and safety
 

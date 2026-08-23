@@ -181,6 +181,7 @@ export function App({
   env = process.env,
   animationDurationMs = DEFAULT_ANIMATION_DURATION_MS,
   animationFrameMs,
+  followAgentOutput = false,
   onSubmitPrompt,
   onExit,
   onInterrupt,
@@ -199,6 +200,9 @@ export function App({
     createInitialUiState,
   );
   const [draft, setDraft] = useState('');
+  const latestTranscriptEntry = session.transcript.at(-1);
+  const latestTranscriptEntryId = latestTranscriptEntry?.id;
+  const observedTranscriptEntryId = useRef(latestTranscriptEntryId);
   const verdicts = useMemo<readonly CriticVerdict[]>(
     () =>
       session.verdicts ??
@@ -220,6 +224,16 @@ export function App({
   useEffect(() => {
     if (ui.selectedAgentId) onAgentChange?.(ui.selectedAgentId);
   }, [onAgentChange, ui.selectedAgentId]);
+
+  useEffect(() => {
+    if (observedTranscriptEntryId.current === latestTranscriptEntryId) return;
+    observedTranscriptEntryId.current = latestTranscriptEntryId;
+    if (!followAgentOutput || ui.inputMode === 'compose' || ui.helpVisible) return;
+    const agentId = latestTranscriptEntry?.agentId;
+    if (agentId && session.agents.some(agent => agent.id === agentId)) {
+      dispatch({ type: 'select-agent', agentId });
+    }
+  }, [followAgentOutput, latestTranscriptEntry, latestTranscriptEntryId, session.agents, ui.helpVisible, ui.inputMode]);
 
   const applyIntent = useCallback(
     (intent: ReturnType<typeof resolveNavigationIntent>) => {

@@ -436,6 +436,7 @@ async function executeLiveRun(options: LiveRunOptions): Promise<GauntletRunResul
   let runner!: GauntletRunner;
   let durableMetadata = options.metadata;
   const backends = createBackends(options.config);
+  const followAgentOutput = flag(options.args, 'follow-agent-output');
 
   const renderApp = (): void => {
     if (!ink) return;
@@ -443,6 +444,7 @@ async function executeLiveRun(options: LiveRunOptions): Promise<GauntletRunResul
       session: broadcast,
       interactive: true,
       motionMode,
+      followAgentOutput,
       onSubmitPrompt: (prompt: string) => { void runner.recordSteering(prompt); },
       onPause: () => controller.abort(new Error('Paused by user')),
       onInterrupt: () => controller.abort(new Error('Interrupt requested')),
@@ -517,6 +519,7 @@ async function executeLiveRun(options: LiveRunOptions): Promise<GauntletRunResul
       session: broadcast,
       interactive: true,
       motionMode,
+      followAgentOutput,
       onSubmitPrompt: (prompt: string) => { void runner.recordSteering(prompt); },
       onPause: () => controller.abort(new Error('Paused by user')),
       onInterrupt: () => controller.abort(new Error('Interrupt requested')),
@@ -812,6 +815,7 @@ async function replayCommand(
     interactive: true,
     motionMode: noMotion ? 'none' as const : 'auto' as const,
     animationDurationMs: verdictAnimationDurationMs,
+    followAgentOutput: flag(args, 'follow-agent-output'),
     onExit: () => { stopped = true; ink.unmount(); },
     onInterrupt: () => { stopped = true; ink.unmount(); },
     onPause: () => {
@@ -1068,12 +1072,13 @@ function help(): string {
 
 Usage:
   goalie run [goal] [--prompt-file FILE] [--yes] [--headless]
-             [--openrouter-model ID] [--openrouter-only]
+             [--openrouter-model ID] [--openrouter-only] [--follow-agent-output]
   goalie resume [session] [--max-turns N|--max-minutes N|--max-cost USD]
+                [--follow-agent-output]
   goalie list
-  goalie replay <session|bundle> [--speed N] [--headless]
+  goalie replay <session|bundle> [--speed N] [--headless] [--follow-agent-output]
   goalie demo [--live] [--crash-after-checkpoint] [--headless]
-              [--openrouter-model ID] [--openrouter-only]
+              [--openrouter-model ID] [--openrouter-only] [--follow-agent-output]
   goalie doctor
   goalie init [--force]
   goalie land <session> [--yes]
@@ -1084,6 +1089,7 @@ Lineup/budget flags:
   --manager PROVIDER  --builder PROVIDER  --critic PROVIDER
   --max-minutes N     --max-turns N       --max-cost USD
   --concurrency N     --no-motion         --cwd PATH
+  --follow-agent-output  show the tab producing the newest transcript line
   --env-file FILE     explicitly load trusted provider secrets (never implicit)
 
 References and repository content are untrusted evidence. Only the kickoff

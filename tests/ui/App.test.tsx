@@ -156,6 +156,66 @@ test('the offense and defense matchup stays visible when a detail tab changes', 
   expect(frame).toContain('Concurrency evidence is still incomp');
 });
 
+test('follow-output mode selects the agent with a new line and pauses while composing', async () => {
+  const screen = render(
+    <App
+      session={session}
+      terminalSize={{ columns: 100, rows: 28 }}
+      colorMode="none"
+      followAgentOutput
+    />,
+  );
+  cleanup.push(screen.unmount);
+
+  const criticLine = {
+    id: 'line-2',
+    kind: 'critic' as const,
+    agentId: 'critic',
+    label: 'Hard Press',
+    text: 'Reviewing the latest checkpoint.',
+    timestamp: '2026-08-22T19:20:22.000Z',
+  };
+  screen.rerender(
+    <App
+      session={{ ...session, transcript: [...session.transcript, criticLine] }}
+      terminalSize={{ columns: 100, rows: 28 }}
+      colorMode="none"
+      followAgentOutput
+    />,
+  );
+  await new Promise(resolve => setTimeout(resolve, 20));
+  expect(screen.lastFrame() ?? '').toContain('>[2]');
+
+  screen.stdin.write('i');
+  await new Promise(resolve => setTimeout(resolve, 10));
+  const composingFrame = screen.lastFrame() ?? '';
+  expect(composingFrame).toContain('COACH>');
+  screen.rerender(
+    <App
+      session={{
+        ...session,
+        transcript: [
+          ...session.transcript,
+          criticLine,
+          {
+            id: 'line-3',
+            kind: 'agent',
+            agentId: 'captain',
+            label: 'Captain',
+            text: 'Coordinating the next lane.',
+            timestamp: '2026-08-22T19:20:23.000Z',
+          },
+        ],
+      }}
+      terminalSize={{ columns: 100, rows: 28 }}
+      colorMode="none"
+      followAgentOutput
+    />,
+  );
+  await new Promise(resolve => setTimeout(resolve, 20));
+  expect(screen.lastFrame() ?? '').toContain('>[2]');
+});
+
 test('no-motion mode renders a text-only verdict without ASCII frames', async () => {
   const screen = render(
     <App

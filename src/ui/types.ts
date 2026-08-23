@@ -135,6 +135,8 @@ export interface AppProps {
   animationDurationMs?: number;
   /** Optional per-frame override, primarily for tests and embedded hosts. */
   animationFrameMs?: number;
+  /** Follow the agent tab that most recently emitted a transcript line. */
+  followAgentOutput?: boolean;
   onSubmitPrompt?: (prompt: string) => void;
   onExit?: () => void;
   /** Immediate graceful checkpoint/cancel, distinct from q confirmation. */
